@@ -3,6 +3,7 @@
   "private": true,
   "type": "module",
   "devDependencies": {
+    "@types/swiper": "^5.4.2",
     "browser-sync": "latest",
     "del": "latest",
     "gulp": "latest",
@@ -21,7 +22,7 @@
     "gulp-terser": "latest",
     "gulp-webp": "latest",
     "stylelint": "latest",
-    "swiper": "latest"
+    "swiper": "^6.5.0"
   },
   "scripts": {
     "build": "gulp build",
@@ -32,5 +33,6 @@
     "last 2 versions",
     "not dead",
     "not ie <= 11"
-  ]
+  ],
+  "dependencies": {}
 }

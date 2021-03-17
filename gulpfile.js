@@ -16,6 +16,8 @@ import webp from 'gulp-webp';
 import del from 'del';
 import browserSync from 'browser-sync';
 
+const { src, dest, series, parallel, watch } = gulp;
+
 // Основные директории
 const dirs = {
   src: 'src',
@@ -44,32 +46,34 @@ const path = {
 };
 
 // HTML
-export const html = () => gulp.src(path.html.root)
+export const html = () => src(path.html.root)
   .pipe(htmlmin({
     removeComments: true,
     collapseWhitespace: true,
   }))
-  .pipe(gulp.dest(path.html.save))
+  .pipe(dest(path.html.save));
 
 // Styles
-export const styles = () => gulp.src(path.styles.compile)
+export const styles = () => src([ path.styles.compile, 'node_modules/swiper/swiper-bundle.min.css' ])
   .pipe(plumber())
   .pipe(sourcemap.init())
   .pipe(sass())
   .pipe(autoprefixer())
   .pipe(csso())
+  .pipe(concat('style.css'))
   .pipe(rename({ suffix: '.min' }))
   .pipe(sourcemap.write('.'))
-  .pipe(gulp.dest(path.styles.save))
+  .pipe(dest(path.styles.save));
 
 // Scripts
-export const scripts = () => gulp.src(path.scripts.root)
+export const scripts = () => src(['node_modules/swiper/swiper-bundle.js', path.scripts.root])
+  .pipe(concat('main.js'))
   .pipe(terser())
   .pipe(rename({ suffix: '.min' }))
-  .pipe(gulp.dest(path.scripts.save))
+  .pipe(dest(path.scripts.save));
 
 // Sprite
-const sprite = () => gulp.src(`${path.img.root}/**/*.svg`)
+const sprite = () => src(`${path.img.root}/**/*.svg`)
   .pipe(svgmin({
     plugins: [{
       removeDoctype: true
@@ -97,24 +101,16 @@ const sprite = () => gulp.src(`${path.img.root}/**/*.svg`)
   }))
   .pipe(svgstore({ inlineSvg: true }))
   .pipe(rename('sprite.svg'))
-  .pipe(gulp.dest(path.img.save));
+  .pipe(dest(path.img.save));
 
 // Copy
-export const copy = () => gulp.src([
+export const copy = () => src([
     `${dirs.src}/fonts/**/*`,
-    `${path.img.root}/**/*`,
+    `${path.img.root}/**/*`
   ], {
     base: dirs.src
   })
-    .pipe(gulp.dest(dirs.dest))
-
-// Swiper JS
-export const swiperJs = () => gulp.src('node_modules/swiper/swiper-bundle.min.js')
-  .pipe(gulp.dest(path.scripts.save))
-
-// Swiper CSS
-export const swiperCss = () => gulp.src('node_modules/swiper/swiper-bundle.min.css')
-  .pipe(gulp.dest(path.styles.save))
+  .pipe(dest(dirs.dest));
 
 // Clean
 export const clean = () => del(dirs.dest);
@@ -126,14 +122,14 @@ const devWatch = () => {
     notify: false,
     open: false,
   });
-  gulp.watch(`${path.html.root}`, gulp.series(html)).on('change', browserSync.reload);
-  gulp.watch(`${path.styles.root}`, gulp.series(styles)).on('change', browserSync.reload);
-  gulp.watch(`${path.scripts.root}`, gulp.series(scripts)).on('change', browserSync.reload);
+  watch(`${path.html.root}`, html).on('change', browserSync.reload);
+  watch(`${path.styles.root}`, styles).on('change', browserSync.reload);
+  watch(`${path.scripts.root}`, scripts).on('change', browserSync.reload);
   // gulp.watch([ `${dirs.src}/fonts/**/*`, `${path.img.root}/**/*` ], gulp.series(copy)).on('change', browserSync.reload);
 };
 
 // Develop
-export const dev = gulp.series(clean, gulp.parallel(copy, swiperJs, swiperCss), gulp.parallel(html, styles, scripts, sprite), devWatch);
+export const dev = series(clean, copy, parallel(html, styles, scripts, sprite), devWatch);
 
 // Build
-export const build = gulp.series(clean, gulp.parallel(html, styles, scripts));
+export const build = series(clean, parallel(html, styles, scripts));
