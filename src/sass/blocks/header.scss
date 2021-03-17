@@ -1,0 +1,19 @@
+.header {
+	color: $white;
+	text-align: center;
+
+	padding-top: 25px;
+	padding-bottom: 25px;
+
+	background-image:
+    linear-gradient(transparentize($red, .15), transparentize($yellow, .15)),
+		url("../img/background/header.jpg");
+	background-repeat: no-repeat;
+	background-position: center top;
+
+	.header__inner {
+		@include flex;
+
+		margin-bottom: 140px;
+	}
+}

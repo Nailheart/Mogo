@@ -1,0 +1,24 @@
+@mixin flex {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+@mixin reset-ul {
+	list-style: none;
+	margin-top: 0;
+	margin-bottom: 0;
+	padding-left: 0;
+}
+
+@mixin line {
+	display: block;
+	content: "";
+
+	width: 60px;
+	height: 3px;
+	margin: 0 auto;
+
+	background-color: $red;
+}

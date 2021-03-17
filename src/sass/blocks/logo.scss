@@ -1,0 +1,15 @@
+.logo {
+	color: $white;
+	font-size: 30px;
+	font-weight: 700;
+	transition: .2s;
+
+	&:hover,
+	&:focus {
+		opacity: .8;
+	}
+
+	&:active {
+		opacity: .4;
+	}
+}

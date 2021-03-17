@@ -1,0 +1,84 @@
+.services {
+	padding-top: 100px;
+	padding-bottom: 110px;
+}
+
+.services__list {
+	@include flex;
+
+	justify-content: flex-start;
+	margin-top: 20px;
+}
+
+.services__item {
+	width: 375px;
+	margin-top: 40px;
+	margin-bottom: 40px;
+	padding-left: 90px;
+
+	box-sizing: border-box;
+	position: relative;
+
+	&::before {
+		content: "";
+
+		width: 32px;
+		height: 32px;
+		background-repeat: no-repeat;
+		background-position: center;
+
+		position: absolute;
+		top: 0;
+		left: 25px;
+	}
+
+	&--alarm::before {
+		background-image: url("../img/icons/alarm.png");
+	}
+
+	&--line-graph::before {
+		background-image: url("../img/icons/line-graph.png");
+	}
+
+	&--computer::before {
+		background-image: url("../img/icons/computer.png");
+	}
+
+	&--book::before {
+		background-image: url("../img/icons/book.png");
+	}
+
+	&--home::before {
+		background-image: url("../img/icons/home.png");
+	}
+
+	&--square::before {
+		background-image: url("../img/icons/square.png");
+	}
+}
+
+.services__title {
+	font-size: 14px;
+	font-weight: 400;
+	text-transform: uppercase;
+
+	margin-top: 0;
+	margin-bottom: 10px;
+}
+
+.services__text {
+	color: $grey;
+	font-family: $text-font;
+	line-height: 24px;
+	margin-top: 0;
+}
+
+.services__hr {
+	display: block;
+
+	width: 100%;
+	margin-top: 0;
+	margin-bottom: 0;
+
+	border: 1px solid $border-color;
+}

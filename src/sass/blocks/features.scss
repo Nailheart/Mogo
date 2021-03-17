@@ -1,0 +1,16 @@
+.features {
+	padding-top: 110px;
+	padding-bottom: 120px;
+}
+
+.features__inner {
+	@include flex;
+
+	align-items: flex-start;
+	margin-top: 80px;
+}
+
+.features__img {
+	width: 570px;
+	height: 380px;
+}

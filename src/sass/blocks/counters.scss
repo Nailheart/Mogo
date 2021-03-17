@@ -1,0 +1,35 @@
+.counters {
+	background-color: $green;
+}
+
+.counters__list {
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	border-left: 1px solid fade($white, 30);
+}
+
+.counters__item {
+	@include flex;
+
+	justify-content: center;
+	flex-direction: column;
+	min-height: 270px;
+	border-right: 1px solid fade($white, 30);
+}
+
+.counters__number {
+	color: $white;
+	font-size: 72px;
+	font-weight: 700;
+	margin-bottom: 10px;
+}
+
+.counters__title {
+	color: $white;
+	font-size: 14px;
+	font-weight: 400;
+	text-transform: uppercase;
+
+	margin-top: 0;
+	margin-bottom: 0;
+}

@@ -1,0 +1,105 @@
+.team {
+	padding-top: 100px;
+	padding-bottom: 110px;
+}
+
+.team__list {
+	@include reset-ul;
+
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 30px;
+
+	margin-top: 90px;
+}
+
+.team__item {
+	text-align: center;
+}
+
+.team__top {
+	background-image: linear-gradient($red, $yellow);
+	transition: .2s;
+	position: relative;
+
+	&:hover,
+	&:focus {
+		transform: translate(-10px, -10px);
+		box-shadow: 10px 10px 0 $green;
+
+		.team__img {
+			opacity: .1;
+		}
+
+		.team__social {
+			opacity: 1;
+		}
+	}
+}
+
+.team__img {
+	display: block;
+	width: 380px;
+	height: 470px;
+	transition: .2s;
+}
+
+.team__social {
+	display: flex;
+
+	opacity: 0;
+	transition: .2s;
+
+	position: absolute;
+	top: 50%;
+	left: 50%;
+
+	transform: translate(-50%, -50%);
+}
+
+.team__link {
+	display: block;
+	color: $red;
+
+	width: 55px;
+	height: 55px;
+
+	background-color: $yellow;
+	border-right: 1px solid $red;
+
+	transition: .2s;
+
+	&:last-child {
+		border-right: none;
+	}
+
+	&::before,
+	&::after {
+		content: "";
+	}
+
+	&:hover,
+	&:focus {
+		color: $white;
+	}
+}
+
+.team__name {
+	font-size: 14px;
+	font-weight: 400;
+	text-transform: uppercase;
+
+	margin-top: 25px;
+	margin-bottom: 5px;
+}
+
+.team__proffesion {
+	color: $grey;
+	font-family: $text-font;
+	line-height: 24px;
+	font-weight: 300;
+	font-style: italic;
+
+	margin-top: 0;
+	margin-bottom: 0;
+}

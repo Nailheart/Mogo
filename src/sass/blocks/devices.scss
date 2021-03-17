@@ -1,0 +1,31 @@
+.devices {
+	padding-top: 100px;
+
+	background-image:
+		linear-gradient(transparentize($white, .15), transparentize($white, .15)),
+		url("../img/background/devices.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.divices__inner {
+	margin-top: 45px;
+	position: relative;
+}
+
+.devices__tablet {
+	display: block;
+
+	width: 477px;
+	height: 582px;
+	margin: 0 auto;
+}
+
+.devices__mobile {
+	width: 274px;
+	height: 476px;
+
+	position: absolute;
+	left: 724px;
+	bottom: -90px;
+}
