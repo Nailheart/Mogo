@@ -3,6 +3,10 @@
 	padding-bottom: 120px;
 }
 
+.features__container {
+  @include container;
+}
+
 .features__inner {
 	@include flex;
 

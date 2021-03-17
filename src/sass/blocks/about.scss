@@ -3,6 +3,10 @@
 	padding-bottom: 110px;
 }
 
+.about__container {
+  @include container;
+}
+
 .about__inner {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);

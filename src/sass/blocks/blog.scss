@@ -3,6 +3,10 @@
 	padding-bottom: 105px;
 }
 
+.blog__container {
+  @include container;
+}
+
 .blog__list {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);

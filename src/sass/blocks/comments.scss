@@ -3,10 +3,6 @@
 	padding-bottom: 70px;
 	background-color: $simple-grey;
 
-	.container {
-		position: relative;
-	}
-
 	&--second {
 		padding-top: 100px;
 		padding-bottom: 130px;
@@ -26,6 +22,12 @@
 			border-radius: 50%;
 		}
 	}
+}
+
+.comments__container {
+  @include container;
+
+  position: relative;
 }
 
 .comments__item {

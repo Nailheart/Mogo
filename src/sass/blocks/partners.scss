@@ -4,6 +4,10 @@
 	background-color: $simple-grey;
 }
 
+.partners__container {
+  @include container;
+}
+
 .partners__list {
 	@include flex;
 }

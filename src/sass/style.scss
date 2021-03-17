@@ -1,12 +1,12 @@
-@import "font-face";
-@import "variables";
-@import "mixins";
+// Common
+@import "common/font-face";
+@import "common/variables";
+@import "common/mixins";
+@import "common/global.scss";
 
-@import "blocks/global";
+// Blocks
 @import "blocks/visually-hidden";
-
 @import "blocks/header";
-@import "blocks/container";
 @import "blocks/logo";
 @import "blocks/nav";
 @import "blocks/slider";

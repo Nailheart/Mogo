@@ -3,6 +3,10 @@
 	padding-bottom: 110px;
 }
 
+.services__container {
+  @include container;
+}
+
 .services__list {
 	@include flex;
 

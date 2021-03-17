@@ -1,12 +1,14 @@
 .footer {
 	padding-top: 70px;
 	background-color: $simple-grey;
+}
 
-	.container {
-		display: grid;
-		grid-template-columns: 480px 390px 1fr;
-		grid-gap: 30px;
-	}
+.footer__container {
+  @include container;
+
+  display: grid;
+	grid-template-columns: 480px 390px 1fr;
+	grid-gap: 30px;
 }
 
 .footer__col {
@@ -15,11 +17,9 @@
 
 .footer__logo {
 	display: inline-block;
-
 	color: $light-grey;
 	font-size: 46px;
 	font-weight: 700;
-
 	margin-bottom: 30px;
 }
 
@@ -27,7 +27,6 @@
 	color: $grey;
 	font-family: $text-font;
 	line-height: 1.6;
-
 	margin-top: 0;
 }
 
@@ -97,7 +96,6 @@
 		position: absolute;
 		top: 50%;
 		left: 0;
-
 		transform: translateY(-50%);
 	}
 
@@ -138,7 +136,6 @@
 	font-size: 14px;
 	font-weight: 400;
 	text-transform: uppercase;
-
 	margin-bottom: 35px;
 }
 
@@ -154,7 +151,6 @@
 .footer__blog-img {
 	width: 120px;
 	height: 80px;
-
 	margin-right: 20px;
 }
 
@@ -171,7 +167,6 @@
 	font-size: 12px;
 	line-height: 1.5;
 	text-transform: uppercase;
-
 	margin-bottom: 10px;
 	transition: .2s;
 
@@ -201,14 +196,12 @@
 
 .footer__instagram-more {
 	display: inline-block;
-
 	color: $grey;
 	font-family: $text-font;
 	font-size: 13px;
 	line-height: 1.8;
 	font-weight: 300;
 	font-style: italic;
-
 	margin-top: 14px;
 	transition: .2s;
 

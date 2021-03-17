@@ -3,6 +3,10 @@
 	padding-bottom: 110px;
 }
 
+.team__container {
+  @include container;
+}
+
 .team__list {
 	@include reset-ul;
 
