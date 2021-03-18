@@ -1,12 +1,12 @@
 .comments {
 	padding-top: 70px;
 	padding-bottom: 70px;
-	background-color: $simple-grey;
+	background-color: var(--color-simple-grey);
 
 	&--second {
 		padding-top: 100px;
 		padding-bottom: 130px;
-		background-color: $white;
+		background-color: var(--color-white);
 
 		.comments__item {
 			align-items: center;
@@ -43,7 +43,7 @@
 	width: 144px;
 	height: 144px;
 	margin-right: 60px;
-	border: 3px solid $green;
+	border: 3px solid var(--color-green);
 }
 
 .comments__content {
@@ -51,7 +51,7 @@
 }
 
 .comments__message {
-	color: $grey;
+	color: var(--color-grey);
 	font-family: $text-font;
 	font-size: 24px;
 	line-height: 1.5;
@@ -63,7 +63,7 @@
 }
 
 .comments__author {
-	color: $dark-grey;
+	color: var(--color-dark-grey);
 	font-family: $subtitle-font;
 	font-size: 24px;
 
@@ -76,7 +76,6 @@
 		position: absolute;
 		top: 50%;
 		left: 0;
-
 		transform: translateY(-50%);
 	}
 }

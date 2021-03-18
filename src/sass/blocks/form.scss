@@ -7,18 +7,18 @@
 	max-height: 40px;
 	padding: 11px 15px;
 
-	border: 1px solid $border-color;
+	border: 1px solid var(--color-border);
 	outline: none;
 	transition: .2s;
 
 	&::placeholder {
-		color: $light-grey;
+		color: var(--color-light-grey);
 		opacity: 1;
 	}
 
 	&:hover,
 	&:focus {
-		border-color: $green;
+		border-color: var(--color-green);
 	}
 }
 
@@ -32,14 +32,14 @@
 	margin-left: -4px;
 	padding: 11px 33px 12px;
 
-	background-color: $green;
+	background-color: var(--color-green);
 	border: none;
 	outline: none;
 	transition: .2s;
 
 	&:hover,
 	&:focus {
-		background-color: $red;
+		background-color: var(--color-red);
 	}
 
 	&:active {

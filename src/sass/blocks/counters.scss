@@ -1,5 +1,5 @@
 .counters {
-	background-color: $green;
+	background-color: var(--color-green);
 }
 
 .counters__container {
@@ -9,7 +9,7 @@
 .counters__list {
 	display: grid;
 	grid-template-columns: repeat(5, 1fr);
-	border-left: 1px solid fade($white, 30);
+	border-left: 1px solid transparentize($white, .7);
 }
 
 .counters__item {
@@ -18,18 +18,18 @@
 	justify-content: center;
 	flex-direction: column;
 	min-height: 270px;
-	border-right: 1px solid fade($white, 30);
+	border-right: 1px solid transparentize($white, .7);
 }
 
 .counters__number {
-	color: $white;
+	color: var(--color-white);
 	font-size: 72px;
 	font-weight: 700;
 	margin-bottom: 10px;
 }
 
 .counters__title {
-	color: $white;
+	color: var(--color-white);
 	font-size: 14px;
 	font-weight: 400;
 	text-transform: uppercase;

@@ -11,7 +11,6 @@
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	grid-gap: 30px;
-
 	margin-top: 50px;
 }
 
@@ -20,7 +19,6 @@
 	width: 380px;
 	height: 240px;
 	margin-bottom: 20px;
-
 	position: relative;
 
 	img {
@@ -30,9 +28,9 @@
 }
 
 .blog__date {
-	color: $white;
+	color: var(--color-white);
 	padding: 10px 15px;
-	background-color: $green;
+	background-color: var(--color-green);
 
 	position: absolute;
 	left: -10px;
@@ -70,26 +68,25 @@
 }
 
 .blog__text {
-	color: $grey;
+	color: var(--color-grey);
 	font-family: $text-font;
 	line-height: 24px;
 	margin-top: 0;
 }
 
 .blog__info {
-	color: $grey;
+	color: var(--color-grey);
 	font-family: $text-font;
 	font-weight: 300;
 	font-style: italic;
 
 	padding-top: 20px;
-	border-top: 1px solid $border-color;
+	border-top: 1px solid var(--color-border);
 }
 
 .blog__info-item {
 	margin-right: 20px;
 	padding-left: 25px;
-
 	position: relative;
 
 	&::before {
@@ -98,11 +95,9 @@
 		height: 15px;
 
 		background-repeat: no-repeat;
-
 		position: absolute;
 		top: 50%;
 		left: 0;
-
 		transform: translateY(-50%);
 	}
 
