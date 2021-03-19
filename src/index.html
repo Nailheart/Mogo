@@ -91,25 +91,37 @@
           <span class="section-header__subtitle">What we do</span>
           <h2 class="section-header__title">Story about us</h2>
 
-          <p class="section-header__text section-header__text--first">Lorem ipsum dolor sit amet, consectetur adipiscing
+          <p class="section-header__text">Lorem ipsum dolor sit amet, consectetur adipiscing
             elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
             nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
         </div>
 
-        <div class="about__inner">
-          <div class="about__item ">
-            <img class="about__img" src="img/about/1.jpg" alt="">
-            <span class="about__item-text">super team</span>
+        <div class="cards about__cards">
+          <div class="cards__item">
+            <div class="cards__item-wrap">
+              <div class="cards__img-container">
+                <img class="cards__img about__cards-img" src="img/about/1.jpg" width="380" height="250" alt="">
+              </div>
+              <span class="cards__item-text">super team</span>
+            </div>
           </div>
 
-          <div class="about__item">
-            <img class="about__img" src="img/about/2.jpg" alt="">
-            <span class="about__item-text">super team</span>
+          <div class="cards__item">
+            <div class="cards__item-wrap">
+              <div class="cards__img-container">
+                <img class="cards__img about__cards-img" src="img/about/2.jpg" alt="">
+              </div>
+              <span class="cards__item-text">super team</span>
+            </div>
           </div>
 
-          <div class="about__item">
-            <img class="about__img" src="img/about/3.jpg" alt="">
-            <span class="about__item-text">super team</span>
+          <div class="cards__item">
+            <div class="cards__item-wrap">
+              <div class="cards__img-container">
+                <img class="cards__img about__cards-img" src="img/about/3.jpg" alt="">
+              </div>
+              <span class="cards__item-text">super team</span>
+            </div>
           </div>
         </div>
 
@@ -179,7 +191,7 @@
             <p class="services__text">Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
           </li>
 
-          <hr class="services__hr">
+          <li class="services__border" aria-hidden="true"></li>
 
           <li class="services__item services__item--book">
             <h4 class="services__title">seo</h4>
@@ -225,7 +237,7 @@
           <span class="section-header__subtitle">Service</span>
           <h2 class="section-header__title">what we do</h2>
 
-          <p class="section-header__text section-header__text--first">Lorem ipsum dolor sit amet, consectetur adipiscing
+          <p class="section-header__text">Lorem ipsum dolor sit amet, consectetur adipiscing
             elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
             nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
         </div>
@@ -238,7 +250,11 @@
           <div class="accordion">
             <div class="accordion__tab">
               <button class="accordion__button accordion__button--picture accordion__button--active"
-                type="button">Photography</button>
+                type="button">Photography
+                <svg class="accordion__button-arrow" width="22" height="12">
+                  <use xlink:href="img/sprite.svg#arrow"></use>
+                </svg>
+              </button>
 
               <div class="accordion__content">
                 <p class="accordion__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
@@ -256,7 +272,11 @@
             </div>
 
             <div class="accordion__tab">
-              <button class="accordion__button accordion__button--equalizer" type="button">Creativity</button>
+              <button class="accordion__button accordion__button--equalizer" type="button">Creativity
+                <svg class="accordion__button-arrow" width="22" height="12">
+                  <use xlink:href="img/sprite.svg#arrow"></use>
+                </svg>
+              </button>
 
               <div class="accordion__content">
                 <p class="accordion__text">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -266,7 +286,11 @@
             </div>
 
             <div class="accordion__tab">
-              <button class="accordion__button accordion__button--bullseye" type="button">Web design</button>
+              <button class="accordion__button accordion__button--bullseye" type="button">Web design
+                <svg class="accordion__button-arrow" width="22" height="12">
+                  <use xlink:href="img/sprite.svg#arrow"></use>
+                </svg>
+              </button>
 
               <div class="accordion__content">
                 <p class="accordion__text">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
@@ -309,66 +333,129 @@
           <span class="section-header__subtitle">Who we are</span>
           <h2 class="section-header__title">Meet our team</h2>
 
-          <p class="section-header__text section-header__text--first">Lorem ipsum dolor sit amet, consectetur adipiscing
+          <p class="section-header__text">Lorem ipsum dolor sit amet, consectetur adipiscing
             elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
             nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
         </div>
 
-        <ul class="team__list">
-          <li class="team__item">
-            <div class="team__top">
-              <img class="team__img" src="img/team/1.jpg" width="380" height="470" alt="">
+        <div class="cards team__cards">
+          <div class="cards__item">
+            <div class="cards__item-wrap">
+              <div class="cards__img-container">
+                <img class="cards__img team__cards-img" src="img/team/1.jpg" width="380" height="470" alt="">
+              </div>
 
-              <div class="team__social">
-                <a class="team__link team__link--facebook" href="#"></a>
-                <a class="team__link team__link--twitter" href="#"></a>
-                <a class="team__link team__link--pinterest" href="#"></a>
-                <a class="team__link team__link--instagram" href="#"></a>
+              <div class="cards__social">
+                <a class="cards__link" href="https://www.facebook.com" target="_blank">
+                  <svg class="cards__social-icon" width="13" height="26">
+                    <use xlink:href="img/sprite.svg#facebook"></use>
+                  </svg>
+                </a>
+
+                <a class="cards__link" href="https://twitter.com" target="_blank">
+                  <svg class="cards__social-icon" width="26" height="22">
+                    <use xlink:href="img/sprite.svg#twitter"></use>
+                  </svg>
+                </a>
+
+                <a class="cards__link" href="https://www.pinterest.com" target="_blank">
+                  <svg class="cards__social-icon" width="21" height="26">
+                    <use xlink:href="img/sprite.svg#pinterest"></use>
+                  </svg>
+                </a>
+
+                <a class="cards__link" href="https://www.instagram.com" target="_blank">
+                  <svg class="cards__social-icon" width="26" height="26">
+                    <use xlink:href="img/sprite.svg#instagram"></use>
+                  </svg>
+                </a>
               </div>
             </div>
 
-            <div class="team__bottom">
-              <h3 class="team__name">Matthew Dix</h3>
-              <p class="team__proffesion">Graphic Design</p>
+            <div class="cards__info">
+              <h3 class="cards__title">Matthew Dix</h3>
+              <span class="cards__subtitle">Graphic Design</span>
             </div>
-          </li>
+          </div>
 
-          <li class="team__item">
-            <div class="team__top">
-              <img class="team__img" src="img/team/2.jpg" width="380" height="470" alt="">
+          <div class="cards__item">
+            <div class="cards__item-wrap">
+              <div class="cards__img-container">
+                <img class="cards__img" src="img/team/2.jpg" width="380" height="470" alt="">
+              </div>
 
-              <div class="team__social">
-                <a class="team__link team__link--facebook" href="#"></a>
-                <a class="team__link team__link--twitter" href="#"></a>
-                <a class="team__link team__link--pinterest" href="#"></a>
-                <a class="team__link team__link--instagram" href="#"></a>
+              <div class="cards__social">
+                <a class="cards__link" href="https://www.facebook.com" target="_blank">
+                  <svg class="cards__social-icon" width="13" height="26">
+                    <use xlink:href="img/sprite.svg#facebook"></use>
+                  </svg>
+                </a>
+
+                <a class="cards__link" href="https://twitter.com" target="_blank">
+                  <svg class="cards__social-icon" width="26" height="22">
+                    <use xlink:href="img/sprite.svg#twitter"></use>
+                  </svg>
+                </a>
+
+                <a class="cards__link" href="https://www.pinterest.com" target="_blank">
+                  <svg class="cards__social-icon" width="21" height="26">
+                    <use xlink:href="img/sprite.svg#pinterest"></use>
+                  </svg>
+                </a>
+
+                <a class="cards__link" href="https://www.instagram.com" target="_blank">
+                  <svg class="cards__social-icon" width="26" height="26">
+                    <use xlink:href="img/sprite.svg#instagram"></use>
+                  </svg>
+                </a>
               </div>
             </div>
 
-            <div class="team__bottom">
-              <h3 class="team__name">Christopher Campbell</h3>
-              <p class="team__proffesion">Branding/UX design</p>
+            <div class="cards__info">
+              <h3 class="cards__title">Christopher Campbell</h3>
+              <span class="cards__subtitle">Branding/UX design</span>
             </div>
-          </li>
+          </div>
 
-          <li class="team__item">
-            <div class="team__top">
-              <img class="team__img" src="img/team/3.jpg" width="380" height="470" alt="">
+          <div class="cards__item">
+            <div class="cards__item-wrap">
+              <div class="cards__img-container">
+                <img class="cards__img" src="img/team/3.jpg" width="380" height="470" alt="">
+              </div>
 
-              <div class="team__social">
-                <a class="team__link team__link--facebook" href="#"></a>
-                <a class="team__link team__link--twitter" href="#"></a>
-                <a class="team__link team__link--pinterest" href="#"></a>
-                <a class="team__link team__link--instagram" href="#"></a>
+              <div class="cards__social">
+                <a class="cards__link" href="https://www.facebook.com" target="_blank">
+                  <svg class="cards__social-icon" width="13" height="26">
+                    <use xlink:href="img/sprite.svg#facebook"></use>
+                  </svg>
+                </a>
+
+                <a class="cards__link" href="https://twitter.com" target="_blank">
+                  <svg class="cards__social-icon" width="26" height="22">
+                    <use xlink:href="img/sprite.svg#twitter"></use>
+                  </svg>
+                </a>
+
+                <a class="cards__link" href="https://www.pinterest.com" target="_blank">
+                  <svg class="cards__social-icon" width="21" height="26">
+                    <use xlink:href="img/sprite.svg#pinterest"></use>
+                  </svg>
+                </a>
+
+                <a class="cards__link" href="https://www.instagram.com" target="_blank">
+                  <svg class="cards__social-icon" width="26" height="26">
+                    <use xlink:href="img/sprite.svg#instagram"></use>
+                  </svg>
+                </a>
               </div>
             </div>
 
-            <div class="team__bottom">
-              <h3 class="team__name">Michael Fertig</h3>
-              <p class="team__proffesion">Developer</p>
+            <div class="cards__info">
+              <h3 class="cards__title">Michael Fertig</h3>
+              <span class="cards__subtitle">Developer</span>
             </div>
-          </li>
-        </ul>
+          </div>
+        </div>
 
       </div>
     </section>
@@ -410,7 +497,7 @@
         <span class="section-header__subtitle">What we do</span>
         <h2 class="section-header__title">some of our work</h2>
 
-        <p class="section-header__text section-header__text--first">Lorem ipsum dolor sit amet, consectetur adipiscing
+        <p class="section-header__text">Lorem ipsum dolor sit amet, consectetur adipiscing
           elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
           exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
       </div>
@@ -678,35 +765,67 @@
 
             <ul class="footer__social-list">
               <li class="footer__social-item">
-                <a class="footer__social-link footer__social-link--facebook" href="#" aria-label="Facebook"></a>
+                <a class="footer__social-link" href="https://www.facebook.com/" aria-label="Facebook" target="_blank">
+                  <svg class="cards__social-icon" width="8" height="16">
+                    <use xlink:href="img/sprite.svg#facebook"></use>
+                  </svg>
+                </a>
               </li>
 
               <li class="footer__social-item">
-                <a class="footer__social-link footer__social-link--twitter" href="#" aria-label="Twitter"></a>
+                <a class="footer__social-link" href="https://www.twitter.com/" aria-label="Twitter" target="_blank">
+                  <svg class="cards__social-icon" width="16" height="14">
+                    <use xlink:href="img/sprite.svg#twitter"></use>
+                  </svg>
+                </a>
               </li>
 
               <li class="footer__social-item">
-                <a class="footer__social-link footer__social-link--instagram" href="#" aria-label="Instagram"></a>
+                <a class="footer__social-link" href="https://www.instagram.com/" aria-label="Instagram" target="_blank">
+                  <svg class="cards__social-icon" width="16" height="16">
+                    <use xlink:href="img/sprite.svg#instagram"></use>
+                  </svg>
+                </a>
               </li>
 
               <li class="footer__social-item">
-                <a class="footer__social-link footer__social-link--pinterest" href="#" aria-label="Pinterest"></a>
+                <a class="footer__social-link" href="https://www.pinterest.com/" aria-label="Pinterest" target="_blank">
+                  <svg class="cards__social-icon" width="13" height="16">
+                    <use xlink:href="img/sprite.svg#pinterest"></use>
+                  </svg>
+                </a>
               </li>
 
               <li class="footer__social-item">
-                <a class="footer__social-link footer__social-link--google" href="#" aria-label="Google plus"></a>
+                <a class="footer__social-link" href="https://plus.google.com/" aria-label="Google plus" target="_blank">
+                  <svg class="cards__social-icon" width="16" height="14">
+                    <use xlink:href="img/sprite.svg#google_plus"></use>
+                  </svg>
+                </a>
               </li>
 
               <li class="footer__social-item">
-                <a class="footer__social-link footer__social-link--youtube" href="#" aria-label="Youtube"></a>
+                <a class="footer__social-link" href="https://www.youtube.com/" aria-label="Youtube" target="_blank">
+                  <svg class="cards__social-icon" width="16" height="12">
+                    <use xlink:href="img/sprite.svg#youtube"></use>
+                  </svg>
+                </a>
               </li>
 
               <li class="footer__social-item">
-                <a class="footer__social-link footer__social-link--dribbble" href="#" aria-label="Dribbble"></a>
+                <a class="footer__social-link" href="https://www.dribbble.com/" aria-label="Dribbble" target="_blank">
+                  <svg class="cards__social-icon" width="16" height="16">
+                    <use xlink:href="img/sprite.svg#dribbble"></use>
+                  </svg>
+                </a>
               </li>
 
               <li class="footer__social-item">
-                <a class="footer__social-link footer__social-link--tumblr" href="#" aria-label="Tumblr"></a>
+                <a class="footer__social-link" href="https://www.tumblr.com/" aria-label="Tumblr" target="_blank">
+                  <svg class="cards__social-icon" width="10" height="16">
+                    <use xlink:href="img/sprite.svg#tumblr"></use>
+                  </svg>
+                </a>
               </li>
             </ul>
           </div>

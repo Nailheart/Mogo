@@ -42,7 +42,6 @@
 	}
 
 	&::after {
-		background-image: url("../img/icons/arrow.png");
 		right: 20px;
 		transform: translateY(-50%) rotate(90deg);
 	}
@@ -55,7 +54,7 @@
 	}
 
 	&--picture::before {
-		background-image: url("../img/icons/picture.png");
+		background-image: url("../img/icons/picture.svg");
 	}
 
 	&--equalizer::before {
@@ -65,6 +64,13 @@
 	&--bullseye::before {
 		background-image: url("../img/icons/bullseye.png");
 	}
+
+  &--active {
+    .accordion__button-arrow {
+      color: var(--color-green);
+      transform: translateY(-50%) rotate(180deg);
+    }
+  }
 
   &--active + .accordion__content {
     max-height: 180px;
@@ -76,12 +82,25 @@
   }
 }
 
+.accordion__button-arrow {
+  color: var(--color-grey);
+  transition: .2s;
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+}
+
 .accordion__content {
 	max-height: 0;
   border-color: var(--color-border);
   box-sizing: border-box;
   overflow: hidden;
   transition: .3s;
+
+  & > *:last-child {
+    margin-bottom: 20px;
+  }
 }
 
 .accordion__text {
@@ -90,11 +109,5 @@
 	line-height: 24px;
 	font-weight: 300;
 	font-style: italic;
-
-	margin-top: 0;
 	margin-bottom: 15px;
-
-  &:last-child {
-    margin-bottom: 20px;
-  }
 }

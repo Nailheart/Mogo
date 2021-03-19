@@ -10,4 +10,5 @@
 
 .partners__list {
 	@include flex;
+  @include reset-ul;
 }

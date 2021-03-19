@@ -7,21 +7,22 @@
 	font-family: $subtitle-font;
 	font-size: 24px;
 	text-transform: none;
-
-	margin-top: 0;
 	margin-bottom: 10px;
 }
 
 .section-header__title {
 	font-size: 30px;
 	text-transform: uppercase;
-	margin-top: 0;
-	margin-bottom: 0;
+	margin-bottom: 40px;
 
 	&::after {
 		@include line;
 		margin-top: 30px;
 	}
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .section-header__text {
@@ -32,7 +33,7 @@
 	max-width: 960px;
 	margin: 0 auto 15px;
 
-	&--first {
-		margin-top: 40px;
-	}
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
