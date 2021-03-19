@@ -16,37 +16,47 @@
       <div class="header__top">
         <a class="logo" href="">MoGo</a>
 
-        <nav class="nav">
-          <ul class="nav__list">
-            <li class="nav__item">
-              <a class="nav__link nav__link--active" href="#">About</a>
-            </li>
+        <div class="header__top-wrap">
+          <nav class="nav header__nav">
+            <ul class="nav__list">
+              <li class="nav__item">
+                <a class="nav__link nav__link--active" href="#">About</a>
+              </li>
 
-            <li class="nav__item">
-              <a class="nav__link" href="#">Service</a>
-            </li>
+              <li class="nav__item">
+                <a class="nav__link" href="#">Service</a>
+              </li>
 
-            <li class="nav__item">
-              <a class="nav__link" href="#">Work</a>
-            </li>
+              <li class="nav__item">
+                <a class="nav__link" href="#">Work</a>
+              </li>
 
-            <li class="nav__item">
-              <a class="nav__link" href="#">Blog</a>
-            </li>
+              <li class="nav__item">
+                <a class="nav__link" href="#">Blog</a>
+              </li>
 
-            <li class="nav__item">
-              <a class="nav__link" href="#">Contact</a>
-            </li>
+              <li class="nav__item">
+                <a class="nav__link" href="#">Contact</a>
+              </li>
+            </ul>
+          </nav>
 
-            <li class="nav__item nav__item--cart">
-              <a class="nav__link" href="#">Cart</a>
-            </li>
+          <div class="cart header__cart">
+            <button class="cart__button" type="button" aria-label="Cart">
+              <svg class="cart__button-icon" width="18" height="15">
+                <use href="img/sprite.svg#cart"></use>
+              </svg>
+            </button>
+          </div>
 
-            <li class="nav__item nav__item--search">
-              <a class="nav__link" href="#">Search</a>
-            </li>
-          </ul>
-        </nav>
+          <div class="search header__search">
+            <button class="search__button" type="button" aria-label="Search">
+              <svg class="search__button-icon" width="18" height="18">
+                <use href="img/sprite.svg#search"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
       </div>
 
       <h1 class="visually-hidden">Mogo - Creative Template</h1>

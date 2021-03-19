@@ -18,6 +18,14 @@
 	padding-left: 0;
 }
 
+@mixin resetButton {
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
 @mixin line {
 	display: block;
 	content: "";
