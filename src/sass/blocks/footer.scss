@@ -7,12 +7,15 @@
   @include container;
 
   display: grid;
-	grid-template-columns: 480px 390px 1fr;
-	grid-gap: 30px;
+	grid-template-columns: 465px 1fr 270px;
+  gap: 0 45px;
+  margin-bottom: 70px;
 }
 
 .footer__col {
-	margin-bottom: 70px;
+  &:last-child {
+    margin-right: 2px;
+  }
 }
 
 .footer__logo {
@@ -20,7 +23,18 @@
 	color: $light-grey;
 	font-size: 46px;
 	font-weight: 700;
+  line-height: 1;
 	margin-bottom: 30px;
+  transition: .2s;
+
+  &:hover,
+  &:focus {
+    color: var(--color-red);
+  }
+
+  &:active {
+    color: transparentize($red, .6)
+  }
 }
 
 .footer__text {
@@ -36,8 +50,9 @@
 .footer__followers-title {
 	font-size: 14px;
 
-	b {
+	.footer__followers-counter {
 		font-size: 18px;
+    font-weight: 700;
 	}
 }
 
@@ -85,7 +100,7 @@
 
 .footer__title {
 	font-size: 14px;
-	font-weight: 400;
+	font-weight: 700;
 	text-transform: uppercase;
 	margin-bottom: 35px;
 }
@@ -103,19 +118,21 @@
 	}
 }
 
+.footer__blog-link {
+  margin-right: 20px;
+}
+
 .footer__blog-img {
-	width: 120px;
+  width: 120px;
 	height: 80px;
-	margin-right: 20px;
+  object-fit: cover;
 }
 
 .footer__blog-content {
 	display: flex;
 	justify-content: center;
 	flex-direction: column;
-
-	width: 250px;
-	padding-right: 50px;
+  width: 200px;
 }
 
 .footer__blog-title {
@@ -156,10 +173,9 @@
 	color: var(--color-grey);
 	font-family: $text-font;
 	font-size: 13px;
-	line-height: 1.8;
 	font-weight: 300;
 	font-style: italic;
-	margin-top: 14px;
+	margin-top: 17px;
 	transition: .2s;
 
 	&:hover,
