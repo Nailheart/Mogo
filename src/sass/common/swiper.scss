@@ -1,0 +1,19 @@
+.swiper {
+  @include container;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.swiper-slide {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 0 60px;
+  padding-left: 85px;
+  padding-right: 85px;
+  box-sizing: border-box;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: var(--color-light-grey);
+}

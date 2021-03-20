@@ -54,7 +54,7 @@ export const html = () => src(path.html.root)
   .pipe(dest(path.html.save));
 
 // Styles
-export const styles = () => src([ path.styles.compile, 'node_modules/swiper/swiper-bundle.min.css' ])
+export const styles = () => src(['node_modules/swiper/swiper-bundle.min.css', path.styles.compile ])
   .pipe(plumber())
   .pipe(sourcemap.init())
   .pipe(sass.sync().on('error', sass.logError))
@@ -66,7 +66,7 @@ export const styles = () => src([ path.styles.compile, 'node_modules/swiper/swip
   .pipe(dest(path.styles.save));
 
 // Scripts
-export const scripts = () => src(['node_modules/swiper/swiper-bundle.js', path.scripts.root])
+export const scripts = () => src(['node_modules/swiper/swiper-bundle.min.js', path.scripts.root])
   .pipe(concat('main.js'))
   .pipe(terser())
   .pipe(rename({ suffix: '.min' }))

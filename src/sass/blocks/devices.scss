@@ -1,5 +1,6 @@
 .devices {
 	padding-top: 100px;
+  background-color: var(--color-grey);
 	background-image:
 		linear-gradient(transparentize($white, .15), transparentize($white, .15)),
 		url("../img/background/devices.jpg");
