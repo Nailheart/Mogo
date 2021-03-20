@@ -26,6 +26,19 @@
   cursor: pointer;
 }
 
+@mixin hoverHeaderNav {
+  color: var(--color-white);
+  padding-bottom: 10px;
+  border-bottom: 3px solid transparent;
+  transition: .2s;
+
+  &:hover,
+  &:focus {
+    color: var(--color-yellow);
+    border-color: var(--color-yellow);
+  }
+}
+
 @mixin line {
 	display: block;
 	content: "";

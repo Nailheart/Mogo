@@ -1,11 +1,4 @@
 .cart__button {
   @include resetButton;
-
-  color: var(--color-white);
-  transition: .2s;
-
-  &:hover,
-  &:focus {
-    color: var(--color-yellow);
-  }
+  @include hoverHeaderNav;
 }

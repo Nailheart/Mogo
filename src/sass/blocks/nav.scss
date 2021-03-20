@@ -12,19 +12,11 @@
 }
 
 .nav__link {
+  @include hoverHeaderNav;
+
 	color: var(--color-white);
 	font-size: 14px;
 	text-transform: uppercase;
-
-	padding-bottom: 10px;
-	border-bottom: 3px solid transparent;
-	transition: .2s;
-
-	&:hover,
-	&:focus {
-		color: var(--color-yellow);
-		border-color: var(--color-yellow);
-	}
 
 	&--active {
 		color: var(--color-yellow);
