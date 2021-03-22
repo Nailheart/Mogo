@@ -73,7 +73,7 @@ export const scripts = () => src(['node_modules/swiper/swiper-bundle.min.js', pa
   .pipe(dest(path.scripts.save));
 
 // Sprite
-const sprite = () => src(`${path.img.root}/**/*.svg`)
+export const sprite = () => src(`${path.img.root}/**/*.svg`)
   .pipe(svgmin({
     plugins: [{
       removeDoctype: true
@@ -103,14 +103,28 @@ const sprite = () => src(`${path.img.root}/**/*.svg`)
   .pipe(rename('sprite.svg'))
   .pipe(dest(path.img.save));
 
+// Imagemin
+export const img = () => src(`${path.img.root}**/*`)
+  .pipe(imagemin([
+    imagemin.mozjpeg({quality: 75, progressive: true}),
+    imagemin.optipng({optimizationLevel: 3}),
+  ]))
+  .pipe(dest(path.img.save))
+  .pipe(webp({quality: 90}))
+  .pipe(dest(path.img.save));
+
 // Copy
 export const copy = () => src([
     `${dirs.src}/fonts/**/*`,
-    `${path.img.root}/**/*`
+    `${path.img.root}**/*`
   ], {
     base: dirs.src
   })
-  .pipe(dest(dirs.dest));
+.pipe(dest(dirs.dest));
+
+// Fonts
+export const fonts = () => src(`${dirs.src}/fonts/**/*`)
+  .pipe(dest(`${dirs.dest}/fonts/`));
 
 // Clean
 export const clean = () => del(dirs.dest);
@@ -129,7 +143,7 @@ const devWatch = () => {
 };
 
 // Develop
-export const dev = series(clean, copy, parallel(html, styles, scripts, sprite), devWatch);
+export const dev = series(clean, parallel(html, styles, scripts, sprite, copy), devWatch);
 
 // Build
-export const build = series(clean, parallel(html, styles, scripts));
+export const build = series(clean, parallel(html, styles, scripts, sprite, fonts, img));
