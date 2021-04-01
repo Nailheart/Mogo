@@ -5,6 +5,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MoGo</title>
+  <link rel="preload" href="fonts/montserrat-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/montserrat-700.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/kaushan-script-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/roboto-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/roboto-300ital.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
@@ -14,7 +19,7 @@
     <div class="header__container">
 
       <div class="header__top">
-        <a class="logo" href="">MoGo</a>
+        <a class="logo" href="/">MoGo</a>
 
         <div class="header__top-wrap">
           <nav class="nav header__nav">
@@ -62,32 +67,40 @@
       <h1 class="visually-hidden">Mogo - Creative Template</h1>
 
       <div class="intro">
-        <span class="intro__subtitle">Creative Template</span>
-        <h2 class="intro__title">Welcome to MoGo</h2>
+        <div class="intro__wrap">
+          <div class="intro__slide">
+            <span class="intro__subtitle">Creative Template</span>
+            <h2 class="intro__title">Welcome to MoGo</h2>
+            <a class="button" href="#">learn more</a>
+          </div>
 
-        <a class="button" href="#">learn more</a>
+          <div class="intro__slide">
+            <span class="intro__subtitle">Creative Template</span>
+            <h2 class="intro__title">Works</h2>
+            <a class="button" href="#">learn more</a>
+          </div>
+
+          <div class="intro__slide">
+            <span class="intro__subtitle">Creative Template</span>
+            <h2 class="intro__title">About</h2>
+            <a class="button" href="#">learn more</a>
+          </div>
+
+          <div class="intro__slide">
+            <span class="intro__subtitle">Creative Template</span>
+            <h2 class="intro__title">Contacts</h2>
+            <a class="button" href="#">learn more</a>
+          </div>
+        </div>
       </div>
 
-      <div class="slider">
-        <a class="slider__link slider__link--active" href="#">
-          <span class="slider__link-number">01</span>
-          Intro
-        </a>
-
-        <a class="slider__link" href="#">
-          <span class="slider__link-number">02</span>
-          Work
-        </a>
-
-        <a class="slider__link" href="#">
-          <span class="slider__link-number">03</span>
-          About
-        </a>
-
-        <a class="slider__link" href="#">
-          <span class="slider__link-number">04</span>
-          Contacts
-        </a>
+      <div class="intro__control">
+        <div class="intro__control-wrap">
+          <div class="intro__control-button"><span class="intro__control-number">01</span>Intro</div>
+          <div class="intro__control-button"><span class="intro__control-number">02</span>Work</div>
+          <div class="intro__control-button"><span class="intro__control-number">03</span>About</div>
+          <div class="intro__control-button"><span class="intro__control-number">04</span>Contacts</div>
+        </div>
       </div>
 
     </div>
@@ -119,7 +132,7 @@
           <div class="cards__item">
             <div class="cards__item-wrap">
               <div class="cards__img-container">
-                <img class="cards__img about__cards-img" src="img/about/2.jpg" alt="">
+                <img class="cards__img about__cards-img" src="img/about/2.jpg" width="380" height="250" alt="">
               </div>
               <span class="cards__item-text">super team</span>
             </div>
@@ -128,7 +141,7 @@
           <div class="cards__item">
             <div class="cards__item-wrap">
               <div class="cards__img-container">
-                <img class="cards__img about__cards-img" src="img/about/3.jpg" alt="">
+                <img class="cards__img about__cards-img" src="img/about/3.jpg" width="380" height="250" alt="">
               </div>
               <span class="cards__item-text">super team</span>
             </div>
@@ -183,20 +196,20 @@
 
         <ul class="services__list">
           <li class="services__item services__item--alarm">
-            <h4 class="services__title">Photography</h4>
+            <h3 class="services__title">Photography</h3>
 
             <p class="services__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
             </p>
           </li>
 
           <li class="services__item services__item--line-graph">
-            <h4 class="services__title">Web Design</h4>
+            <h3 class="services__title">Web Design</h3>
 
             <p class="services__text">Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
           </li>
 
           <li class="services__item services__item--computer">
-            <h4 class="services__title">Creativity</h4>
+            <h3 class="services__title">Creativity</h3>
 
             <p class="services__text">Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
           </li>
@@ -204,19 +217,19 @@
           <li class="services__border" aria-hidden="true"></li>
 
           <li class="services__item services__item--book">
-            <h4 class="services__title">seo</h4>
+            <h3 class="services__title">seo</h3>
 
             <p class="services__text">Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
           </li>
 
           <li class="services__item services__item--home">
-            <h4 class="services__title">Css/Html</h4>
+            <h3 class="services__title">Css/Html</h3>
 
             <p class="services__text">Lorem dolor sit amet, consectetur adipiscing elit, sed do tempor.</p>
           </li>
 
           <li class="services__item services__item--square">
-            <h4 class="services__title">digital</h4>
+            <h3 class="services__title">digital</h3>
 
             <p class="services__text">Sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
           </li>
@@ -234,8 +247,9 @@
         </div>
 
         <div class="divices__inner">
-          <img class="devices__tablet" src="img/background/tablet.png" alt="">
-          <img class="devices__mobile" src="img/background/mobile.png" alt="">
+          <img class="devices__tablet" src="img/background/tablet.png" width="570" height="620"
+            alt="Tablet site version Mobile">
+          <img class="devices__mobile" src="img/background/mobile.png" width="274" height="476" alt="site version">
         </div>
       </div>
     </section>
@@ -393,25 +407,28 @@
               </div>
 
               <div class="cards__social">
-                <a class="cards__link" href="https://www.facebook.com" target="_blank">
+                <a class="cards__link" href="https://www.facebook.com" aria-label="facebook" target="_blank"
+                  rel="noopener">
                   <svg class="cards__social-icon" width="13" height="26">
                     <use xlink:href="img/sprite.svg#facebook"></use>
                   </svg>
                 </a>
 
-                <a class="cards__link" href="https://twitter.com" target="_blank">
+                <a class="cards__link" href="https://twitter.com" aria-label="twitter" target="_blank" rel="noopener">
                   <svg class="cards__social-icon" width="26" height="22">
                     <use xlink:href="img/sprite.svg#twitter"></use>
                   </svg>
                 </a>
 
-                <a class="cards__link" href="https://www.pinterest.com" target="_blank">
+                <a class="cards__link" href="https://www.pinterest.com" aria-label="pinterest" target="_blank"
+                  rel="noopener">
                   <svg class="cards__social-icon" width="21" height="26">
                     <use xlink:href="img/sprite.svg#pinterest"></use>
                   </svg>
                 </a>
 
-                <a class="cards__link" href="https://www.instagram.com" target="_blank">
+                <a class="cards__link" href="https://www.instagram.com" aria-label="instagram" target="_blank"
+                  rel="noopener">
                   <svg class="cards__social-icon" width="26" height="26">
                     <use xlink:href="img/sprite.svg#instagram"></use>
                   </svg>
@@ -432,25 +449,28 @@
               </div>
 
               <div class="cards__social">
-                <a class="cards__link" href="https://www.facebook.com" target="_blank">
+                <a class="cards__link" href="https://www.facebook.com" aria-label="facebook" target="_blank"
+                  rel="noopener">
                   <svg class="cards__social-icon" width="13" height="26">
                     <use xlink:href="img/sprite.svg#facebook"></use>
                   </svg>
                 </a>
 
-                <a class="cards__link" href="https://twitter.com" target="_blank">
+                <a class="cards__link" href="https://twitter.com" aria-label="twitter" target="_blank" rel="noopener">
                   <svg class="cards__social-icon" width="26" height="22">
                     <use xlink:href="img/sprite.svg#twitter"></use>
                   </svg>
                 </a>
 
-                <a class="cards__link" href="https://www.pinterest.com" target="_blank">
+                <a class="cards__link" href="https://www.pinterest.com" aria-label="pinterest" target="_blank"
+                  rel="noopener">
                   <svg class="cards__social-icon" width="21" height="26">
                     <use xlink:href="img/sprite.svg#pinterest"></use>
                   </svg>
                 </a>
 
-                <a class="cards__link" href="https://www.instagram.com" target="_blank">
+                <a class="cards__link" href="https://www.instagram.com" aria-label="instagram" target="_blank"
+                  rel="noopener">
                   <svg class="cards__social-icon" width="26" height="26">
                     <use xlink:href="img/sprite.svg#instagram"></use>
                   </svg>
@@ -471,25 +491,28 @@
               </div>
 
               <div class="cards__social">
-                <a class="cards__link" href="https://www.facebook.com" target="_blank">
+                <a class="cards__link" href="https://www.facebook.com" aria-label="facebook" target="_blank"
+                  rel="noopener">
                   <svg class="cards__social-icon" width="13" height="26">
                     <use xlink:href="img/sprite.svg#facebook"></use>
                   </svg>
                 </a>
 
-                <a class="cards__link" href="https://twitter.com" target="_blank">
+                <a class="cards__link" href="https://twitter.com" aria-label="twitter" target="_blank" rel="noopener">
                   <svg class="cards__social-icon" width="26" height="22">
                     <use xlink:href="img/sprite.svg#twitter"></use>
                   </svg>
                 </a>
 
-                <a class="cards__link" href="https://www.pinterest.com" target="_blank">
+                <a class="cards__link" href="https://www.pinterest.com" aria-label="pinterest" target="_blank"
+                  rel="noopener">
                   <svg class="cards__social-icon" width="21" height="26">
                     <use xlink:href="img/sprite.svg#pinterest"></use>
                   </svg>
                 </a>
 
-                <a class="cards__link" href="https://www.instagram.com" target="_blank">
+                <a class="cards__link" href="https://www.instagram.com" aria-label="instagram" target="_blank"
+                  rel="noopener">
                   <svg class="cards__social-icon" width="26" height="26">
                     <use xlink:href="img/sprite.svg#instagram"></use>
                   </svg>
@@ -512,27 +535,27 @@
 
         <ul class="partners__list">
           <li class="partners__item">
-            <img src="img/partners/1.png" alt="">
+            <img src="img/partners/1.png" width="109" height="110" alt="Hipster Barbershop">
           </li>
 
           <li class="partners__item">
-            <img src="img/partners/2.png" alt="">
+            <img src="img/partners/2.png" width="89" height="92" alt="ABCD">
           </li>
 
           <li class="partners__item">
-            <img src="img/partners/3.png" alt="">
+            <img src="img/partners/3.png" width="128" height="127" alt="Design Quality">
           </li>
 
           <li class="partners__item">
-            <img src="img/partners/4.png" alt="">
+            <img src="img/partners/4.png" width="119" height="95" alt="Hipster Barbershop">
           </li>
 
           <li class="partners__item">
-            <img src="img/partners/5.png" alt="">
+            <img src="img/partners/5.png" width="114" height="118" alt="Hipster Barbershop">
           </li>
 
           <li class="partners__item">
-            <img src="img/partners/6.png" alt="">
+            <img src="img/partners/6.png" width="110" height="119" alt="Studio Designer">
           </li>
         </ul>
 
@@ -549,9 +572,9 @@
           exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
       </div>
 
-      <ul class="works__list">
+      <div class="works__list">
         <a class="works__item" href="#">
-          <img class="works__img" src="img/works/1.jpg" alt="">
+          <img class="works__img" src="img/works/1.jpg" width="480" height="390" alt="">
 
           <div class="works__description">
             <svg class="works__item-icon" width="30" height="30">
@@ -564,7 +587,7 @@
         </a>
 
         <a class="works__item" href="#">
-          <img class="works__img" src="img/works/2.jpg" alt="">
+          <img class="works__img" src="img/works/2.jpg" width="480" height="390" alt="">
 
           <div class="works__description">
             <svg class="works__item-icon" width="30" height="30">
@@ -577,7 +600,7 @@
         </a>
 
         <a class="works__item works__item--big" href="#">
-          <img class="works__img" src="img/works/3.jpg" alt="">
+          <img class="works__img" src="img/works/3.jpg" width="480" height="780" alt="">
 
           <div class="works__description">
             <svg class="works__item-icon" width="30" height="30">
@@ -590,7 +613,7 @@
         </a>
 
         <a class="works__item" href="#">
-          <img class="works__img" src="img/works/4.jpg" alt="">
+          <img class="works__img" src="img/works/4.jpg" width="480" height="390" alt="">
 
           <div class="works__description">
             <svg class="works__item-icon" width="30" height="30">
@@ -603,7 +626,7 @@
         </a>
 
         <a class="works__item" href="#">
-          <img class="works__img" src="img/works/5.jpg" alt="">
+          <img class="works__img" src="img/works/5.jpg" width="480" height="390" alt="">
 
           <div class="works__description">
             <svg class="works__item-icon" width="30" height="30">
@@ -616,7 +639,7 @@
         </a>
 
         <a class="works__item" href="#">
-          <img class="works__img" src="img/works/6.jpg" alt="">
+          <img class="works__img" src="img/works/6.jpg" width="480" height="390" alt="">
 
           <div class="works__description">
             <svg class="works__item-icon" width="30" height="30">
@@ -629,7 +652,7 @@
         </a>
 
         <a class="works__item" href="#">
-          <img class="works__img" src="img/works/7.jpg" alt="">
+          <img class="works__img" src="img/works/7.jpg" width="480" height="390" alt="">
 
           <div class="works__description">
             <svg class="works__item-icon" width="30" height="30">
@@ -640,7 +663,7 @@
             <p class="works__item-text">Lorem ipsum dolor sit</p>
           </div>
         </a>
-      </ul>
+      </div>
     </section>
 
     <section class="comments comments--secondary">
@@ -656,7 +679,8 @@
 
                 <div class="comments__content">
                   <p class="comments__message">“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                    exercitation.”
                   </p>
 
                   <span class="comments__author">Joshua Earle</span>
@@ -711,10 +735,10 @@
 
         <ul class="clients__list">
           <li class="clients__item">
-            <img class="clients__avatar" src="img/avatars/clients-1.png" alt="">
+            <img class="clients__avatar" src="img/avatars/clients-1.png" width="110" height="110" alt="">
 
             <div class="clients__text">
-              <h4 class="clients__name">Matthew Dix</h4>
+              <h3 class="clients__name">Matthew Dix</h3>
               <span class="clients__proffesion">Graphic Design</span>
 
               <p class="clients__comment">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
@@ -723,10 +747,10 @@
           </li>
 
           <li class="clients__item">
-            <img class="clients__avatar" src="img/avatars/clients-2.png" alt="">
+            <img class="clients__avatar" src="img/avatars/clients-2.png" width="110" height="110" alt="">
 
             <div class="clients__text">
-              <h4 class="clients__name">Nick Karvounis</h4>
+              <h3 class="clients__name">Nick Karvounis</h3>
               <span class="clients__proffesion">Graphic Design</span>
 
               <p class="clients__comment">Sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
@@ -735,10 +759,10 @@
           </li>
 
           <li class="clients__item">
-            <img class="clients__avatar" src="img/avatars/clients-3.png" alt="">
+            <img class="clients__avatar" src="img/avatars/clients-3.png" width="110" height="110" alt="">
 
             <div class="clients__text">
-              <h4 class="clients__name">Jaelynn Castillo </h4>
+              <h3 class="clients__name">Jaelynn Castillo </h3>
               <span class="clients__proffesion">Graphic Design</span>
 
               <p class="clients__comment">Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
@@ -747,10 +771,10 @@
           </li>
 
           <li class="clients__item">
-            <img class="clients__avatar" src="img/avatars/clients-4.png" alt="">
+            <img class="clients__avatar" src="img/avatars/clients-4.png" width="110" height="110" alt="">
 
             <div class="clients__text">
-              <h4 class="clients__name">Mike Petrucci</h4>
+              <h3 class="clients__name">Mike Petrucci</h3>
               <span class="clients__proffesion">Graphic Design</span>
 
               <p class="clients__comment">Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
@@ -772,13 +796,13 @@
 
         <ul class="blog__list">
           <li class="blog__item">
-            <a class="blog__img" href="#">
-              <img src="img/blog/1.jpg" width="380" height="240" alt="Lorem ipsum dolor sit amet">
+            <a class="blog__img-link" href="#">
+              <img class="blog__img" src="img/blog/1.jpg" width="380" height="240" alt="Lorem ipsum dolor sit amet">
 
-              <div class="blog__date">
-                <div class="blog__day">15</div>
-                <div class="blog__mmonth">Jan</div>
-              </div>
+              <time class="blog__date">
+                <span class="blog__day">15</span>
+                <span class="blog__month">Jan</span>
+              </time>
             </a>
 
             <div class="blog__item-inner">
@@ -795,13 +819,13 @@
           </li>
 
           <li class="blog__item">
-            <a class="blog__img" href="#">
-              <img src="img/blog/2.jpg" width="380" height="240" alt="Sed do eiusmod tempor">
+            <a class="blog__img-link" href="#">
+              <img class="blog__img" src="img/blog/2.jpg" width="380" height="240" alt="Sed do eiusmod tempor">
 
-              <div class="blog__date">
-                <div class="blog__day">14</div>
-                <div class="blog__mmonth">Jan</div>
-              </div>
+              <time class="blog__date">
+                <span class="blog__day">14</span>
+                <span class="blog__month">Jan</span>
+              </time>
             </a>
 
             <div class="blog__item-inner">
@@ -818,13 +842,13 @@
           </li>
 
           <li class="blog__item">
-            <a class="blog__img" href="#">
-              <img src="img/blog/3.jpg" width="380" height="240" alt="Incididunt ut labore et dolore">
+            <a class="blog__img-link" href="#">
+              <img class="blog__img" src="img/blog/3.jpg" width="380" height="240" alt="Incididunt ut labore et dolore">
 
-              <div class="blog__date">
-                <div class="blog__day">12</div>
-                <div class="blog__mmonth">Jan</div>
-              </div>
+              <time class="blog__date">
+                <span class="blog__day">12</span>
+                <span class="blog__month">Jan</span>
+              </time>
             </a>
 
             <div class="blog__item-inner">
@@ -858,7 +882,7 @@
     <div class="footer__container">
 
       <div class="footer__col">
-        <a class="footer__logo" href="">MoGo</a>
+        <a class="footer__logo" href="/">MoGo</a>
 
         <p class="footer__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
           incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
@@ -872,7 +896,8 @@
 
             <ul class="footer__social-list">
               <li class="footer__social-item">
-                <a class="footer__social-link" href="https://www.facebook.com/" aria-label="Facebook" target="_blank">
+                <a class="footer__social-link" href="https://www.facebook.com/" aria-label="Facebook" target="_blank"
+                  rel="noopener">
                   <svg class="cards__social-icon" width="8" height="16">
                     <use xlink:href="img/sprite.svg#facebook"></use>
                   </svg>
@@ -880,7 +905,8 @@
               </li>
 
               <li class="footer__social-item">
-                <a class="footer__social-link" href="https://www.twitter.com/" aria-label="Twitter" target="_blank">
+                <a class="footer__social-link" href="https://www.twitter.com/" aria-label="Twitter" target="_blank"
+                  rel="noopener">
                   <svg class="cards__social-icon" width="16" height="14">
                     <use xlink:href="img/sprite.svg#twitter"></use>
                   </svg>
@@ -888,7 +914,8 @@
               </li>
 
               <li class="footer__social-item">
-                <a class="footer__social-link" href="https://www.instagram.com/" aria-label="Instagram" target="_blank">
+                <a class="footer__social-link" href="https://www.instagram.com/" aria-label="Instagram" target="_blank"
+                  rel="noopener">
                   <svg class="cards__social-icon" width="16" height="16">
                     <use xlink:href="img/sprite.svg#instagram"></use>
                   </svg>
@@ -896,7 +923,8 @@
               </li>
 
               <li class="footer__social-item">
-                <a class="footer__social-link" href="https://www.pinterest.com/" aria-label="Pinterest" target="_blank">
+                <a class="footer__social-link" href="https://www.pinterest.com/" aria-label="Pinterest" target="_blank"
+                  rel="noopener">
                   <svg class="cards__social-icon" width="13" height="16">
                     <use xlink:href="img/sprite.svg#pinterest"></use>
                   </svg>
@@ -904,7 +932,8 @@
               </li>
 
               <li class="footer__social-item">
-                <a class="footer__social-link" href="https://plus.google.com/" aria-label="Google plus" target="_blank">
+                <a class="footer__social-link" href="https://plus.google.com/" aria-label="Google plus" target="_blank"
+                  rel="noopener">
                   <svg class="cards__social-icon" width="16" height="14">
                     <use xlink:href="img/sprite.svg#google-plus"></use>
                   </svg>
@@ -912,7 +941,8 @@
               </li>
 
               <li class="footer__social-item">
-                <a class="footer__social-link" href="https://www.youtube.com/" aria-label="Youtube" target="_blank">
+                <a class="footer__social-link" href="https://www.youtube.com/" aria-label="Youtube" target="_blank"
+                  rel="noopener">
                   <svg class="cards__social-icon" width="16" height="12">
                     <use xlink:href="img/sprite.svg#youtube"></use>
                   </svg>
@@ -920,7 +950,8 @@
               </li>
 
               <li class="footer__social-item">
-                <a class="footer__social-link" href="https://www.dribbble.com/" aria-label="Dribbble" target="_blank">
+                <a class="footer__social-link" href="https://www.dribbble.com/" aria-label="Dribbble" target="_blank"
+                  rel="noopener">
                   <svg class="cards__social-icon" width="16" height="16">
                     <use xlink:href="img/sprite.svg#dribbble"></use>
                   </svg>
@@ -928,7 +959,8 @@
               </li>
 
               <li class="footer__social-item">
-                <a class="footer__social-link" href="https://www.tumblr.com/" aria-label="Tumblr" target="_blank">
+                <a class="footer__social-link" href="https://www.tumblr.com/" aria-label="Tumblr" target="_blank"
+                  rel="noopener">
                   <svg class="cards__social-icon" width="10" height="16">
                     <use xlink:href="img/sprite.svg#tumblr"></use>
                   </svg>
@@ -946,12 +978,12 @@
       </div>
 
       <div class="footer__col">
-        <h2 class="footer__title">Blogs</h2>
+        <a class="footer__title" href="#">Blogs</a>
 
         <ul class="footer__blog">
           <li class="footer__blog-item">
             <a class="footer__blog-link" href="#">
-              <img class="footer__blog-img" src="img/blog/4.jpg" width="120" height="80" alt="">
+              <img class="footer__blog-img" src="img/blog/4.jpg" width="120" height="80" alt="Floor lamp">
             </a>
 
             <div class="footer__blog-content">
@@ -963,7 +995,7 @@
 
           <li class="footer__blog-item">
             <a class="footer__blog-link" href="#">
-              <img class="footer__blog-img" src="img/blog/5.jpg" width="120" height="80" alt="">
+              <img class="footer__blog-img" src="img/blog/5.jpg" width="120" height="80" alt="Starfall">
             </a>
 
             <div class="footer__blog-content">
@@ -975,7 +1007,8 @@
 
           <li class="footer__blog-item">
             <a class="footer__blog-link" href="#">
-              <img class="footer__blog-img" src="img/blog/6.jpg" width="120" height="80" alt="">
+              <img class="footer__blog-img" src="img/blog/6.jpg" width="120" height="80"
+                alt="The guy plays the guitar ">
             </a>
 
             <div class="footer__blog-content">
@@ -988,60 +1021,60 @@
       </div>
 
       <div class="footer__col">
-        <h2 class="footer__title">instagram</h2>
+        <a class="footer__title" href="#">Instagram</a>
 
         <ul class="footer__instagram">
           <li class="footer__instagram-item">
-            <a class="footer__instagram-img" href="#">
-              <img src="img/instagram/1.jpg" alt="">
+            <a class="footer__instagram-link" href="#">
+              <img class="footer__instagram-img" src="img/instagram/1.jpg" width="88" height="88" alt="Canyon">
             </a>
           </li>
 
           <li class="footer__instagram-item">
-            <a class="footer__instagram-img" href="#">
-              <img src="img/instagram/2.jpg" alt="">
+            <a class="footer__instagram-link" href="#">
+              <img class="footer__instagram-img" src="img/instagram/2.jpg" width="88" height="88" alt="Creek in Valley">
             </a>
           </li>
 
           <li class="footer__instagram-item">
-            <a class="footer__instagram-img" href="#">
-              <img src="img/instagram/3.jpg" alt="">
+            <a class="footer__instagram-link" href="#">
+              <img class="footer__instagram-img" src="img/instagram/3.jpg" width="88" height="88" alt="Night traffic">
             </a>
           </li>
 
           <li class="footer__instagram-item">
-            <a class="footer__instagram-img" href="#">
-              <img src="img/instagram/4.jpg" alt="">
+            <a class="footer__instagram-link" href="#">
+              <img class="footer__instagram-img" src="img/instagram/4.jpg" width="88" height="88" alt="Night sky">
             </a>
           </li>
 
           <li class="footer__instagram-item">
-            <a class="footer__instagram-img" href="#">
-              <img src="img/instagram/5.jpg" alt="">
+            <a class="footer__instagram-link" href="#">
+              <img class="footer__instagram-img" src="img/instagram/5.jpg" width="88" height="88" alt="Stump">
             </a>
           </li>
 
           <li class="footer__instagram-item">
-            <a class="footer__instagram-img" href="#">
-              <img src="img/instagram/6.jpg" alt="">
+            <a class="footer__instagram-link" href="#">
+              <img class="footer__instagram-img" src="img/instagram/6.jpg" width="88" height="88" alt="The mountains">
             </a>
           </li>
 
           <li class="footer__instagram-item">
-            <a class="footer__instagram-img" href="#">
-              <img src="img/instagram/7.jpg" alt="">
+            <a class="footer__instagram-link" href="#">
+              <img class="footer__instagram-img" src="img/instagram/7.jpg" width="88" height="88" alt="Tunnel">
             </a>
           </li>
 
           <li class="footer__instagram-item">
-            <a class="footer__instagram-img" href="#">
-              <img src="img/instagram/8.jpg" alt="">
+            <a class="footer__instagram-link" href="#">
+              <img class="footer__instagram-img" src="img/instagram/8.jpg" width="88" height="88" alt="Pine flowering">
             </a>
           </li>
 
           <li class="footer__instagram-item">
-            <a class="footer__instagram-img" href="#">
-              <img src="img/instagram/9.jpg" alt="">
+            <a class="footer__instagram-link" href="#">
+              <img class="footer__instagram-img" src="img/instagram/9.jpg" width="88" height="88" alt="Sea">
             </a>
           </li>
         </ul>
@@ -1052,7 +1085,7 @@
 
     <div class="footer__copyright">
       <p class="footer__copyright-text">© 2016 MoGo free PSD template by <a class="footer__copyright-author"
-          href="#">Laaqiq</a></p>
+          href="https://creativemarket.com/laaqiq?u=freebiesbug" target="_blank" rel="noopener">Laaqiq</a></p>
     </div>
   </footer>
 

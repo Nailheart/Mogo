@@ -75,21 +75,15 @@ export const scripts = () => src(['node_modules/swiper/swiper-bundle.min.js', pa
 // Sprite
 export const sprite = () => src(`${path.img.root}/**/*.svg`)
   .pipe(svgmin({
-    plugins: [{
-      removeDoctype: true
-    }, {
-      removeXMLNS: true
-    }, {
-      removeXMLProcInst: true
-    }, {
-      removeComments: true
-    }, {
-      removeMetadata: true
-    }, {
-      removeEditorNSData: true
-    }, {
-      removeViewBox: false
-    }]
+    plugins: [
+      { removeDoctype: true },
+      { removeXMLNS: true },
+      { removeXMLProcInst: true },
+      { removeComments: true },
+      { removeMetadata: true },
+      { removeEditorNSData: true },
+      { removeViewBox: false }
+    ]
   }))
   .pipe(cheerio({
     run: function ($) {
@@ -108,6 +102,13 @@ export const img = () => src(`${path.img.root}**/*`)
   .pipe(imagemin([
     imagemin.mozjpeg({quality: 75, progressive: true}),
     imagemin.optipng({optimizationLevel: 3}),
+    imagemin.svgo({
+      plugins: [
+        { removeViewBox: false },
+        { cleanupIDs: true },
+        { removeDimensions: true }
+      ]
+    })
   ]))
   .pipe(dest(path.img.save))
   .pipe(webp({quality: 90}))
@@ -139,7 +140,6 @@ const devWatch = () => {
   watch(`${path.html.root}`, html).on('change', browserSync.reload);
   watch(`${path.styles.root}`, styles).on('change', browserSync.reload);
   watch(`${path.scripts.root}`, scripts).on('change', browserSync.reload);
-  // gulp.watch([ `${dirs.src}/fonts/**/*`, `${path.img.root}/**/*` ], gulp.series(copy)).on('change', browserSync.reload);
 };
 
 // Develop
