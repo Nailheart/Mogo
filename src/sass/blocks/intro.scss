@@ -50,6 +50,7 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   width: 100%;
+  transform: none !important;
 }
 
 .intro__control-button {

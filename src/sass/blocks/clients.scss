@@ -47,7 +47,7 @@
 	font-family: $text-font;
 	font-weight: 300;
 	font-style: italic;
-	line-height: 24px;
+	line-height: 1.6;
 
 	&::after {
 		@include line;
@@ -61,5 +61,5 @@
 .clients__comment {
 	color: var(--color-grey);
 	font-family: $text-font;
-	line-height: 24px;
+	line-height: 1.6;
 }

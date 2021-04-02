@@ -13,6 +13,7 @@ const intro = new Swiper('.intro', {
 
   wrapperClass: 'intro__wrap',
   slideClass: 'intro__slide',
+  noSwipingClass: 'intro__wrap',
 
   thumbs: {
     swiper: introControl,
