@@ -131,7 +131,7 @@ export const fonts = () => src(`${dirs.src}/fonts/**/*`)
 export const clean = () => del(dirs.dest);
 
 // Server
-const devWatch = () => {
+export const devWatch = () => {
   browserSync.init({
     server: dirs.dest,
     notify: false,
