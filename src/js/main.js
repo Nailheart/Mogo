@@ -47,3 +47,11 @@ if (accordionButtons) {
     });
   })
 }
+
+// Simplebar кастомный скролл
+const scrollItems = document.querySelectorAll('.accordion__content');
+if (scrollItems) {
+  scrollItems.forEach((item) => {
+    item = new SimpleBar(item);
+  });
+}

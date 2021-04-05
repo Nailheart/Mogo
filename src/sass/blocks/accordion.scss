@@ -74,11 +74,11 @@
 
   &--active + .accordion__content {
     max-height: 180px;
-    padding: 20px 20px 0;
+    padding: 20px 40px 0 20px;
     border-width: 1px;
     border-style: solid;
     border-top: none;
-    overflow: auto;
+    overflow: visible;
   }
 }
 
@@ -97,10 +97,6 @@
   box-sizing: border-box;
   overflow: hidden;
   transition: .3s;
-
-  & > *:last-child {
-    margin-bottom: 20px;
-  }
 }
 
 .accordion__text {
@@ -110,4 +106,8 @@
 	font-weight: 300;
 	font-style: italic;
 	margin-bottom: 15px;
+
+  &:last-child {
+    margin-bottom: 20px;
+  }
 }

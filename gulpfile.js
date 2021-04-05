@@ -143,7 +143,7 @@ export const devWatch = () => {
 };
 
 // Develop
-export const dev = series(clean, parallel(html, styles, scripts, sprite, copy), devWatch);
+export const dev = series(clean, parallel(html, styles, scripts, sprite, fonts, img), devWatch);
 
 // Build
 export const build = series(clean, parallel(html, styles, scripts, sprite, fonts, img));
