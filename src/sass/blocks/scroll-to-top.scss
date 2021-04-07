@@ -1,0 +1,30 @@
+.scroll-to-top {
+  @include resetButton;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 50px;
+  height: 50px;
+  background-color: var(--color-red);
+  border-radius: 50%;
+  transition: background-color .2s, right .4s;
+  position: fixed;
+  right: 50px;
+  bottom: 50px;
+  transform: rotate(180deg);
+  z-index: 999;
+
+  &:hover {
+    background-color: var(--color-dark-red);
+  }
+
+  &--hide {
+    right: -50px;
+  }
+}
+
+.scroll-to-top__icon {
+  color: var(--color-white);
+}

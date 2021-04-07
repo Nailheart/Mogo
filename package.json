@@ -21,8 +21,7 @@
     "gulp-svgstore": "latest",
     "gulp-terser": "latest",
     "gulp-webp": "latest",
-    "stylelint": "latest",
-    "swiper": "^6.5.0"
+    "stylelint": "latest"
   },
   "scripts": {
     "build": "gulp build",
@@ -34,5 +33,7 @@
     "not dead",
     "not ie <= 11"
   ],
-  "dependencies": {}
+  "dependencies": {
+    "swiper": "^6.5.4"
+  }
 }

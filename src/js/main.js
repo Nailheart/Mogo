@@ -48,10 +48,30 @@ if (accordionButtons) {
   })
 }
 
-// Simplebar кастомный скролл
+// Кастомный скролл simplebar
 const scrollItems = document.querySelectorAll('.accordion__content');
 if (scrollItems) {
   scrollItems.forEach((item) => {
     item = new SimpleBar(item);
+  });
+}
+
+// Скролл на верх сайта
+const scollToTop = document.querySelector('.scroll-to-top');
+if (scollToTop) {
+  window.addEventListener('scroll', () => {
+    if (window.pageYOffset > 900) {
+      scollToTop.classList.remove('scroll-to-top--hide');
+    } else {
+      scollToTop.classList.add('scroll-to-top--hide');
+    }
+  });
+
+  scollToTop.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'smooth'
+    });
   });
 }
