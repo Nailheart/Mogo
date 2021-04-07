@@ -2,7 +2,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
   height: 200px;
   background-color: var(--color-grey);
   background-image: linear-gradient(transparentize($white, 0.15), transparentize($white, 0.15)),
@@ -16,7 +15,6 @@
   font-size: 24px;
   font-weight: 700;
   text-transform: uppercase;
-
   position: relative;
   transition: 0.2s;
 

@@ -38,15 +38,12 @@
 .works__description {
 	color: var(--color-white);
 	text-align: center;
-
 	width: 100%;
 	padding-left: 20px;
 	padding-right: 20px;
-
 	box-sizing: border-box;
   transition: .2s;
 	opacity: 0;
-
 	position: absolute;
 	top: 50%;
 	left: 0;
@@ -61,7 +58,6 @@
 	font-size: 14px;
 	font-weight: 400;
 	text-transform: uppercase;
-
 	margin-bottom: 5px;
 	position: relative;
 }

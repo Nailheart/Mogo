@@ -2,11 +2,9 @@
 	font-family: $text-font;
 	font-weight: 300;
 	font-style: italic;
-
 	width: 200px;
 	max-height: 40px;
 	padding: 11px 15px;
-
 	border: 1px solid var(--color-border);
 	outline: none;
 	transition: .2s;
@@ -27,11 +25,9 @@
 	font-size: 14px;
 	font-weight: 700;
 	text-transform: uppercase;
-
 	min-height: 40px;
 	margin-left: -4px;
 	padding: 11px 33px 12px;
-
 	background-color: var(--color-green);
 	border: none;
 	outline: none;

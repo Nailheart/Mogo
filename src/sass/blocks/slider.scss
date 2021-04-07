@@ -8,11 +8,9 @@
   font-size: 18px;
   text-align: left;
   text-transform: uppercase;
-
   width: 280px;
 	padding-top: 25px;
   padding-bottom: 25px;
-
 	opacity: .7;
   transition: .2s;
 	position: relative;
@@ -21,7 +19,6 @@
 	&::after {
 		content: "";
 		height: 3px;
-
 		position: absolute;
 		top: 0;
 		left: 0;

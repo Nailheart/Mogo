@@ -19,18 +19,15 @@
 .services__item {
 	width: 375px;
 	padding-left: 90px;
-
 	box-sizing: border-box;
 	position: relative;
 
 	&::before {
 		content: "";
-
 		width: 32px;
 		height: 32px;
 		background-repeat: no-repeat;
 		background-position: center;
-
 		position: absolute;
 		top: 0;
 		left: 25px;
