@@ -117,7 +117,8 @@ export const img = () => src(`${path.img.root}**/*`)
 // Copy
 export const copy = () => src([
     `${dirs.src}/fonts/**/*`,
-    `${path.img.root}**/*`
+    `${path.img.root}**/*`,
+    `${dirs.src}/pp/**/*`
   ], {
     base: dirs.src
   })
@@ -126,6 +127,9 @@ export const copy = () => src([
 // Fonts
 export const fonts = () => src(`${dirs.src}/fonts/**/*`)
   .pipe(dest(`${dirs.dest}/fonts/`));
+
+const pixelGlass = () => src(`node_modules/pixel-glass/{styles.css,script.js}`)
+  .pipe(dest(`${dirs.dest}/pp/`))
 
 // Clean
 export const clean = () => del(dirs.dest);
@@ -143,7 +147,7 @@ export const devWatch = () => {
 };
 
 // Develop
-export const dev = series(clean, parallel(html, styles, scripts, sprite, fonts, img), devWatch);
+export const dev = series(parallel(html, styles, scripts, sprite, copy, pixelGlass), devWatch);
 
 // Build
 export const build = series(clean, parallel(html, styles, scripts, sprite, fonts, img));

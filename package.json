@@ -3,7 +3,7 @@
   "private": true,
   "type": "module",
   "devDependencies": {
-    "@types/swiper": "^5.4.2",
+    "@types/swiper": "latest",
     "browser-sync": "latest",
     "del": "latest",
     "gulp": "latest",
@@ -21,6 +21,7 @@
     "gulp-svgstore": "latest",
     "gulp-terser": "latest",
     "gulp-webp": "latest",
+    "pixel-glass": "latest",
     "stylelint": "latest"
   },
   "scripts": {
@@ -34,6 +35,6 @@
     "not ie <= 11"
   ],
   "dependencies": {
-    "swiper": "^6.5.4"
+    "swiper": "latest"
   }
 }
