@@ -1,7 +1,7 @@
 // Fonts
-$main-font: "Montserrat", sans-serif;
-$subtitle-font: "Kaushan Script", cursive;
-$text-font: "Roboto", sans-serif;
+$main-font: "Montserrat", "Arial", "Helvetica Neue", "Helvetica", sans-serif;
+$subtitle-font: "Kaushan Script", "Candara", "Calibri", "Segoe UI", "Optima", cursive;
+$text-font: "Roboto", "Tahoma", "Verdana", "Segoe", sans-serif;
 
 // Colors
 $white: #fff;
@@ -23,4 +23,5 @@ $gradient-base: linear-gradient($red, $yellow);
 
 // Device width
 $tablet-width: 768px;
-$desktop-width: 1920px;
+$laptop-width: 992px;
+$desktop-width: 1260px;
