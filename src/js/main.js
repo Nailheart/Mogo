@@ -1,26 +1,3 @@
-// Слайдер блока intro
-const introControl = new Swiper('.intro__control', {
-  slidesPerView: 4,
-  spaceBetween: 30,
-
-  wrapperClass: 'intro__control-wrap',
-  slideClass: 'intro__control-button',
-});
-const intro = new Swiper('.intro', {
-  slidesPerView: 1,
-  spaceBetween: 175,
-  speed: 500,
-
-  wrapperClass: 'intro__wrap',
-  slideClass: 'intro__slide',
-  noSwipingClass: 'intro__wrap',
-
-  thumbs: {
-    swiper: introControl,
-    slideThumbActiveClass: 'intro__control-button--active'
-  }
-});
-
 // Слайдер секции comments
 const swiper = new Swiper('.swiper-container', {
   loop: true,
@@ -74,4 +51,24 @@ if (scollToTop) {
       behavior: 'smooth'
     });
   });
+}
+
+//
+const introSlides = document.querySelectorAll('.intro__slide');
+const introButtons = document.querySelectorAll('.intro__control-button');
+if (introSlides) {
+  for (let i = 0; i < introButtons.length; i++) {
+    introButtons[i].addEventListener('click', () => {
+      introSlides.forEach((slide) => {
+        slide.classList.remove('intro__slide--active');
+      });
+
+      introButtons.forEach((button) => {
+        button.classList.remove('intro__control-button--active');
+      });
+
+      introSlides[i].classList.add('intro__slide--active');
+      introButtons[i].classList.add('intro__control-button--active')
+    });
+  }
 }
