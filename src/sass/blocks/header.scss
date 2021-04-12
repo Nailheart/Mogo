@@ -13,23 +13,27 @@
 
   display: grid;
   align-content: space-between;
-  min-height: 100vh;
-  padding-top: 30px;
+  height: 100vh;
+  min-height: 360px;
   box-sizing: border-box;
+
+  @media (min-width: $desktop-width) {
+    min-height: 760px;
+    padding-top: 24px;
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 .header__top {
-  @include flex;
-}
-
-.header__top-wrap {
   display: flex;
-}
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-top: 15px;
+  padding-bottom: 15px;
 
-.header__nav {
-  margin-right: 50px;
-}
-
-.header__cart {
-  margin-right: 40px;
+  @media (min-width: $tablet-width) {
+    align-items: baseline;
+  }
 }

@@ -4,19 +4,23 @@
 	font-size: 14px;
 	font-weight: 700;
 	text-transform: uppercase;
-
-	padding: 10px 30px;
+	padding: 7px 15px;
 	background: none;
 	border: 3px solid var(--color-white);
 	transition: .2s;
 
 	&:hover,
 	&:focus {
-		color: var(--color-red);
-		border-color: var(--color-red);
+    color: var(--color-black);
+    background-color: var(--color-white);
+    border-color: var(--color-red);
 	}
 
 	&:active {
 		opacity: .8;
 	}
+
+  @media (min-width: $tablet-width) {
+    padding: 10px 30px;
+  }
 }

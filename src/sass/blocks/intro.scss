@@ -3,24 +3,20 @@
   margin-left: auto;
   margin-right: auto;
   overflow: hidden;
-  position: relative;
 
-  @media (min-width: $laptop-width) {}
+  @media (min-width: $tablet-width) {
+    width: 75%;
+  }
+}
+
+.intro__wrap {
+  display: flex;
+  width: 100%;
 }
 
 .intro__slide {
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  transition: .5s linear;
-  transform: translateX(100%);
-
-  &--active {
-    position: static;
-    opacity: 1;
-    transform: translateX(0);
-  }
+  flex-shrink: 0;
+  width: 100%;
 }
 
 .intro__title {
@@ -40,12 +36,19 @@
   }
 
   @media (min-width: $tablet-width) {
-    font-size: 150px;
+    font-size: 80px;
+    margin-bottom: 35px;
+  }
+  @media (min-width: $laptop-width) {
+    font-size: 120px;
     margin-bottom: 50px;
 
     &::after {
       margin-top: 70px;
     }
+  }
+  @media (min-width: $desktop-width) {
+    font-size: 150px;
   }
 }
 
@@ -56,30 +59,41 @@
   margin-bottom: 20px;
 
   @media (min-width: $tablet-width) {
-    font-size: 72px;
+    font-size: 32px;
     margin-bottom: 30px;
+  }
+  @media (min-width: $laptop-width) {
+    font-size: 52px;
+  }
+  @media (min-width: $desktop-width) {
+    font-size: 72px;
   }
 }
 
 .intro__control {
+  width: 100%;
+  overflow: hidden;
+}
+
+.intro__control-wrap {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 30px;
+  width: 100%;
+  transform: none !important;
 }
 
 .intro__control-button {
   @include resetButton;
 
   color: var(--color-white);
-  font-size: 18px;
-  text-align: left;
+  font-size: 0;
   text-transform: uppercase;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   border-top: 3px solid var(--color-white);
-  transition: 0.2s;
+  transition: .2s;
   cursor: pointer;
-  opacity: 0.7;
+  opacity: .7;
   position: relative;
 
   &:hover,
@@ -92,23 +106,31 @@
 
     &::before {
       content: "";
-      width: 25%;
+      width: 35%;
       height: 3px;
       background-color: var(--color-red);
       position: absolute;
       top: -3px;
       left: 0;
     }
+
+    &:hover,
+    &:focus {
+      color: var(--color-white);
+      border-color: var(--color-white);
+    }
   }
 
-  @media (max-width: 320px) {
-    font-size: 12px;
-    text-align: center;
-    padding-top: 10px;
-    padding-bottom: 10px;
+  @media (min-width: $tablet-width) {
+    font-size: 18px;
+    text-align: left;
+    padding-top: 20px;
+    padding-bottom: 20px;
 
-    .intro__control-number {
-      display: none;
+    &--active {
+      &::before {
+        width: 25%;
+      }
     }
   }
 }
