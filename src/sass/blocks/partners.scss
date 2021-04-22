@@ -9,6 +9,19 @@
 }
 
 .partners__list {
-	@include flex;
   @include reset-ul;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+  gap: 15px;
+
+  @media (min-width: 470px) {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+  @media (min-width: $laptop) {
+    grid-template-columns: repeat(6, 1fr);
+  }
 }

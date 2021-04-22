@@ -1,17 +1,33 @@
 .works {
 	padding-top: 110px;
-  max-width: $desktop-width;
-  margin-left: auto;
-  margin-right: auto;
+}
+
+.works__section-header {
+  @include container;
 }
 
 .works__list {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-	margin-top: 90px;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  justify-content: center;
+  max-width: 1920px;
+	margin-top: 50px;
+
+  @media (min-width: $tablet) {
+    margin-top: 70px;
+  }
+  @media (min-width: $laptop) {
+    margin-top: 90px;
+  }
+  @media (min-width: 1920px) {
+    grid-template-columns: repeat(auto-fit, minmax(320px, 480px));
+  }
 }
 
 .works__item {
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
   background-image: $gradient-base;
   position: relative;
 

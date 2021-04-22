@@ -82,26 +82,6 @@ if (scollToTop) {
   });
 }
 
-// Прародия на слайдер ))
-// const introSlides = document.querySelectorAll('.intro__slide');
-// const introButtons = document.querySelectorAll('.intro__control-button');
-// if (introSlides) {
-//   for (let i = 0; i < introButtons.length; i++) {
-//     introButtons[i].addEventListener('click', () => {
-//       introSlides.forEach((slide) => {
-//         slide.classList.remove('intro__slide--active');
-//       });
-
-//       introButtons.forEach((button) => {
-//         button.classList.remove('intro__control-button--active');
-//       });
-
-//       introSlides[i].classList.add('intro__slide--active');
-//       introButtons[i].classList.add('intro__control-button--active')
-//     });
-//   }
-// }
-
 // Открытие закрытие бургер меню
 const burger = document.querySelector('.nav__toggle');
 burger.addEventListener('click', () => {

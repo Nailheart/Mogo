@@ -147,7 +147,7 @@ export const devWatch = () => {
 };
 
 // Develop
-export const dev = series(parallel(html, styles, scripts, sprite, copy, pixelGlass), devWatch);
+export const dev = series(clean, parallel(html, styles, scripts, sprite, fonts, img, pixelGlass), devWatch);
 
 // Build
 export const build = series(clean, parallel(html, styles, scripts, sprite, fonts, img));

@@ -7,14 +7,45 @@
   @include container;
 
   display: grid;
-	grid-template-columns: 465px 1fr 270px;
-  gap: 0 45px;
+  gap: 45px;
   margin-bottom: 70px;
+
+  @media (min-width: $tablet) {
+    grid-template-columns: 1fr 1fr;
+  }
+  @media (min-width: $laptop) {
+	  grid-template-columns: 38.75% 31.25% 22.5%;
+  }
 }
 
 .footer__col {
-  &:last-child {
-    margin-right: 2px;
+  &--grid {
+    display: grid;
+    justify-content: center;
+  }
+
+  @media (min-width: $tablet) {
+    display: block;
+
+    &:first-child {
+      grid-column: 1/-1;
+    }
+
+    &--grid {
+      width: max-content;
+      justify-self: center;
+    }
+  }
+
+  @media (min-width: $laptop) {
+    &:first-child {
+      grid-column: auto;
+    }
+
+    &--grid {
+      width: auto;
+      justify-self: auto;
+    }
   }
 }
 
@@ -100,10 +131,11 @@
 
 .footer__title {
   display: inline-block;
+  justify-self: start;
 	font-size: 14px;
 	font-weight: 700;
 	text-transform: uppercase;
-	margin-bottom: 22px;
+	margin-bottom: 15px;
   padding-bottom: 5px;
   border-bottom: 3px solid transparent;
   transition: .2s;
@@ -117,61 +149,19 @@
   &:active {
     opacity: .7;
   }
+
+  @media (min-width: $tablet) {
+    margin-bottom: 22px;
+  }
 }
 
-.footer__blog {
-  @include reset-ul;
-}
+.footer__inner {
+  display: grid;
+  gap: 20px;
 
-.footer__blog-item {
-	display: flex;
-	margin-bottom: 30px;
-
-	&:last-child {
-		margin-bottom: 0;
-	}
-}
-
-.footer__blog-link {
-  margin-right: 20px;
-}
-
-.footer__blog-img {
-  width: 120px;
-	height: 80px;
-  object-fit: cover;
-}
-
-.footer__blog-content {
-	display: flex;
-	justify-content: center;
-	flex-direction: column;
-  width: 200px;
-}
-
-.footer__blog-title {
-	font-size: 12px;
-	line-height: 1.5;
-	text-transform: uppercase;
-	margin-bottom: 10px;
-	transition: .2s;
-
-	&:hover,
-	&:focus {
-		text-decoration: underline;
-	}
-
-	&:active {
-		opacity: .4;
-	}
-}
-
-.footer__blog-date {
-	color: $grey;
-	font-family: $text-font;
-	font-size: 13px;
-	font-weight: 300;
-	font-style: italic;
+  @media (min-width: $tablet) {
+    gap: 30px;
+  }
 }
 
 .footer__instagram {
@@ -179,7 +169,8 @@
 
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
-	grid-gap: 2px;
+	gap: 2px;
+  padding-right: 2px;
 }
 
 .footer__instagram-link {
@@ -190,9 +181,9 @@
 .footer__instagram-img {
   transition: .2s;
 
-  &:hover {
+  &:hover,
+  &:focus {
     opacity: .9;
-    transform: scale(1.1);
   }
 }
 

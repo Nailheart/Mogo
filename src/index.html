@@ -7,10 +7,8 @@
   <meta name="description" content="Creative Template">
   <title>MoGo</title>
   <link rel="preload" href="fonts/montserrat-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-  <link rel="preload" href="fonts/montserrat-700.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="fonts/kaushan-script-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="fonts/roboto-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-  <link rel="preload" href="fonts/roboto-300ital.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 
   <link rel="stylesheet" href="pp/styles.css">
   <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css">
@@ -21,22 +19,6 @@
       HTML {
         background: url("pp/MoGo_FREE_Template_by_Laaqiq.jpg") no-repeat 50% 0;
       }
-    }
-
-    .about,
-    .counters,
-    .services,
-    .devices,
-    .features,
-    .comments,
-    .team,
-    .partners,
-    .works,
-    .clients,
-    .blog,
-    .map,
-    .footer {
-      display: none;
     }
   </style>
 </head>
@@ -297,13 +279,13 @@
 
         <div class="divices__inner">
           <picture>
-            <source type="image/webp" srcset="img/background/tablet.webp 1x, img/background/tablet@2x.webp 2x">
-            <img class="devices__tablet" src="img/background/tablet.png" srcset="img/background/tablet@2x.png 2x"
+            <source type="image/webp" srcset="img/backgrounds/tablet.webp 1x, img/backgrounds/tablet@2x.webp 2x">
+            <img class="devices__tablet" src="img/backgrounds/tablet.png" srcset="img/backgrounds/tablet@2x.png 2x"
               width="570" height="620" alt="Tablet site version Mobile">
           </picture>
           <picture>
-            <source type="image/webp" srcset="img/background/mobile.webp 1x, img/background/mobile@2x.webp 2x">
-            <img class="devices__mobile" src="img/background/mobile.png" srcset="img/background/mobile@2x.png 2x"
+            <source type="image/webp" srcset="img/backgrounds/mobile.webp 1x, img/backgrounds/mobile@2x.webp 2x">
+            <img class="devices__mobile" src="img/backgrounds/mobile.png" srcset="img/backgrounds/mobile@2x.png 2x"
               width="274" height="476" alt="site version">
           </picture>
         </div>
@@ -682,7 +664,7 @@
     </section>
 
     <section id="works" class="works">
-      <div class="section-header">
+      <div class="section-header works__section-header">
         <span class="section-header__subtitle">What we do</span>
         <h2 class="section-header__title">some of our work</h2>
 
@@ -900,11 +882,11 @@
                 width="110" height="110" alt="Matthew Dix">
             </picture>
 
-            <div class="clients__text">
+            <div class="clients__content">
               <h3 class="clients__name">Matthew Dix</h3>
               <span class="clients__proffesion">Graphic Design</span>
 
-              <p class="clients__comment">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+              <p class="clients__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                 incididunt ut labore et dolore magna aliqua. Ut enim ad minim.</p>
             </div>
           </li>
@@ -916,11 +898,11 @@
                 width="110" height="110" alt="Nick Karvounis">
             </picture>
 
-            <div class="clients__text">
+            <div class="clients__content">
               <h3 class="clients__name">Nick Karvounis</h3>
               <span class="clients__proffesion">Graphic Design</span>
 
-              <p class="clients__comment">Sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+              <p class="clients__text">Sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                 labore et dolore magna aliqua. Ut enim ad minim veniam</p>
             </div>
           </li>
@@ -932,11 +914,11 @@
                 width="110" height="110" alt="Jaelynn Castillo">
             </picture>
 
-            <div class="clients__text">
+            <div class="clients__content">
               <h3 class="clients__name">Jaelynn Castillo</h3>
               <span class="clients__proffesion">Graphic Design</span>
 
-              <p class="clients__comment">Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+              <p class="clients__text">Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                 incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
             </div>
           </li>
@@ -948,11 +930,11 @@
                 width="110" height="110" alt="Mike Petrucci">
             </picture>
 
-            <div class="clients__text">
+            <div class="clients__content">
               <h3 class="clients__name">Mike Petrucci</h3>
               <span class="clients__proffesion">Graphic Design</span>
 
-              <p class="clients__comment">Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+              <p class="clients__text">Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
                 ut labore et dolore magna aliqua. Ut enim ad minim.</p>
             </div>
           </li>
@@ -1158,67 +1140,74 @@
         </div>
 
         <form class="form" action="">
-          <input class="form__email" type="email" placeholder="Your Email...">
+          <input class="form__input" type="email" placeholder="Your Email...">
 
           <input class="form__submit" type="submit" value="subscribe">
         </form>
       </div>
 
-      <div class="footer__col">
+      <div class="footer__col footer__col--grid">
         <a class="footer__title" href="#">Blogs</a>
 
-        <ul class="footer__blog">
-          <li class="footer__blog-item">
-            <a class="footer__blog-link" href="#">
+        <div class="footer__inner">
+
+          <article class="article">
+            <a class="article__img-container" href="#">
               <picture>
                 <source type="image/webp" srcset="img/blog/4.webp 1x, img/blog/4@2x.webp 2x">
-                <img class="footer__blog-img" src="img/blog/4.jpg" srcset="img/blog/4@2x.jpg 2x" width="120" height="80"
+                <img class="article__img" src="img/blog/4.jpg" srcset="img/blog/4@2x.jpg 2x" width="120" height="80"
                   alt="Floor lamp">
               </picture>
             </a>
 
-            <div class="footer__blog-content">
-              <a class="footer__blog-title" href="#">Lorem ipsum dolor sit amet, consectetur adipiscing</a>
+            <div class="article__caption">
+              <h3 class="article__title">
+                <a class="article__title-link" href="#">Lorem ipsum dolor sit amet, consectetur adipiscing</a>
+              </h3>
 
-              <time class="footer__blog-date" datetime="2016-01-09">Jan 9, 2016</time>
+              <time class="article__date" datetime="2016-01-09">Jan 9, 2016</time>
             </div>
-          </li>
+          </article>
 
-          <li class="footer__blog-item">
-            <a class="footer__blog-link" href="#">
+          <article class="article">
+            <a class="article__img-container" href="#">
               <picture>
                 <source type="image/webp" srcset="img/blog/5.webp 1x, img/blog/5@2x.webp 2x">
-                <img class="footer__blog-img" src="img/blog/5.jpg" srcset="img/blog/5@2x.jpg 2x" width="120" height="80"
+                <img class="article__img" src="img/blog/5.jpg" srcset="img/blog/5@2x.jpg 2x" width="120" height="80"
                   alt="Starfall">
               </picture>
             </a>
 
-            <div class="footer__blog-content">
-              <a class="footer__blog-title" href="#">Consectetur adipiscing elit, sed do eiusmod tempor</a>
+            <div class="article__caption">
+              <h3 class="article__title">
+                <a class="article__title-link" href="#">Consectetur adipiscing elit, sed do eiusmod tempor</a>
+              </h3>
 
-              <time class="footer__blog-date" datetime="2016-01-09">Jan 9, 2016</time>
+              <time class="article__date" datetime="2016-01-09">Jan 9, 2016</time>
             </div>
-          </li>
+          </article>
 
-          <li class="footer__blog-item">
-            <a class="footer__blog-link" href="#">
+          <article class="article">
+            <a class="article__img-container" href="#">
               <picture>
                 <source type="image/webp" srcset="img/blog/6.webp 1x, img/blog/6@2x.webp 2x">
-                <img class="footer__blog-img" src="img/blog/6.jpg" srcset="img/blog/6@2x.jpg 2x" width="120" height="80"
+                <img class="article__img" src="img/blog/6.jpg" srcset="img/blog/6@2x.jpg 2x" width="120" height="80"
                   alt="The guy plays the guitar">
               </picture>
             </a>
 
-            <div class="footer__blog-content">
-              <a class="footer__blog-title" href="#">sed do eiusmod tempor incididunt ut labore</a>
+            <div class="article__caption">
+              <h3 class="article__title">
+                <a class="article__title-link" href="#">sed do eiusmod tempor incididunt ut labore</a>
+              </h3>
 
-              <time class="footer__blog-date" datetime="2016-01-09">Jan 9, 2016</time>
+              <time class="article__date" datetime="2016-01-09">Jan 9, 2016</time>
             </div>
-          </li>
-        </ul>
+          </article>
+        </div>
       </div>
 
-      <div class="footer__col">
+      <div class="footer__col footer__col--grid">
         <a class="footer__title" href="#">Instagram</a>
 
         <ul class="footer__instagram">
@@ -1334,9 +1323,6 @@
   <script src="js/main.min.js"></script>
   <noscript>
     <style>
-      /**
-      * Reinstate scrolling for non-JS clients
-      */
       .accordion__button--active+.accordion__content {
         overflow: auto;
       }

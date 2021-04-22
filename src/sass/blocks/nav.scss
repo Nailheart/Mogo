@@ -43,10 +43,10 @@
     }
   }
 
-  @media (min-width: $tablet-width) {
+  @media (min-width: $tablet) {
     display: flex;
   }
-  @media (min-width: $laptop-width) {
+  @media (min-width: $laptop) {
     .nav__toggle {
       display: none;
     }

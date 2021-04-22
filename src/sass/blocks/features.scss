@@ -8,13 +8,19 @@
 }
 
 .features__inner {
-	@include flex;
+  display: grid;
+  justify-content: center;
+  gap: 30px;
+	margin-top: 50px;
 
-	align-items: flex-start;
-	margin-top: 80px;
+  @media (min-width: $tablet) {
+    margin-top: 80px;
+  }
+  @media (min-width: $laptop) {
+    grid-template-columns: max-content 1fr;
+  }
 }
 
 .features__img {
-	width: 570px;
-	height: 380px;
+	max-height: 380px;
 }

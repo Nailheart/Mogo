@@ -1,0 +1,50 @@
+.article {
+  display: flex;
+}
+
+.article__img-container {
+  margin-right: 20px;
+}
+
+.article__img {
+  min-width: 120px;
+	min-height: 80px;
+  object-fit: cover;
+}
+
+.article__caption {
+  display: flex;
+	justify-content: center;
+	flex-direction: column;
+  max-width: 200px;
+}
+
+.article__title {
+  font-size: 12px;
+	line-height: 1.5;
+  font-weight: 400;
+	text-transform: uppercase;
+	margin-bottom: 10px;
+	transition: .2s;
+
+	&:hover,
+	&:focus {
+		text-decoration: underline;
+	}
+
+	&:active {
+		opacity: .4;
+	}
+}
+
+.article__title-link {
+  color: inherit;
+}
+
+.article__date {
+  color: $grey;
+	font-family: $text-font;
+	font-size: 13px;
+	font-weight: 300;
+	font-style: italic;
+}

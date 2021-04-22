@@ -10,10 +10,27 @@
 .blog__list {
   @include reset-ul;
 
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	grid-gap: 30px;
+	display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 	margin-top: 50px;
+
+  @media (min-width: $tablet) {
+    margin-right: -30px;
+  }
+}
+
+.blog__item {
+  max-width: 380px;
+  margin-bottom: 30px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $tablet) {
+    margin-right: 30px;
+  }
 }
 
 .blog__img-link {

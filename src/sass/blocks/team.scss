@@ -8,7 +8,11 @@
 }
 
 .team__cards {
-	margin-top: 90px;
+	margin-top: 50px;
+
+  @media (min-width: $tablet) {
+    margin-top: 90px;
+  }
 }
 
 .team__cards-img {
