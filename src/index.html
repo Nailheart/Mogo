@@ -1,26 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zxx">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Creative Template">
   <title>MoGo</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+  <link rel="manifest" href="img/favicon/site.webmanifest">
   <link rel="preload" href="fonts/montserrat-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="fonts/kaushan-script-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="fonts/roboto-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-
-  <link rel="stylesheet" href="pp/styles.css">
   <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css">
   <link rel="stylesheet" href="css/style.min.css">
 
-  <style>
-    @media (min-width: 1260px) {
-      HTML {
-        background: url("pp/MoGo_FREE_Template_by_Laaqiq.jpg") no-repeat 50% 0;
+  <noscript>
+    <style>
+      .accordion__button--active+.accordion__content {
+        overflow: auto;
       }
-    }
-  </style>
+    </style>
+  </noscript>
 </head>
 
 <body>
@@ -31,8 +33,8 @@
         <a class="logo" href="/">MoGo</a>
 
         <nav class="nav header__nav">
-          <button class="nav__toggle" type="button">
-            <span class="nav__toggle-item" aria-label="Open menu"></span>
+          <button class="nav__toggle" type="button" aria-label="Open menu">
+            <span class="nav__toggle-item"></span>
           </button>
 
           <ul class="nav__list">
@@ -277,7 +279,7 @@
           <h2 class="section-header__title">Unique design</h2>
         </div>
 
-        <div class="divices__inner">
+        <div class="devices__inner">
           <picture>
             <source type="image/webp" srcset="img/backgrounds/tablet.webp 1x, img/backgrounds/tablet@2x.webp 2x">
             <img class="devices__tablet" src="img/backgrounds/tablet.png" srcset="img/backgrounds/tablet@2x.png 2x"
@@ -383,6 +385,8 @@
 
     <section class="comments">
       <div class="comments__container">
+
+        <h2 class="visually-hidden">Comments</h2>
 
         <div class="swiper">
           <div class="swiper-container">
@@ -611,6 +615,8 @@
     <section class="partners">
       <div class="partners__container">
 
+        <h2 class="visually-hidden">Partners</h2>
+
         <ul class="partners__list">
           <li class="partners__item">
             <picture>
@@ -798,6 +804,8 @@
     <section class="comments comments--secondary">
       <div class="comments__container">
 
+        <h2 class="visually-hidden">Comments</h2>
+
         <div class="swiper">
           <div class="swiper-container">
             <div class="swiper-wrapper">
@@ -960,7 +968,7 @@
                   alt="Lorem ipsum dolor sit amet">
               </picture>
 
-              <time class="blog__date">
+              <time class="blog__date" datetime="2016-01-15">
                 <span class="blog__day">15</span>
                 <span class="blog__month">Jan</span>
               </time>
@@ -987,7 +995,7 @@
                   alt="Sed do eiusmod tempor">
               </picture>
 
-              <time class="blog__date">
+              <time class="blog__date" datetime="2016-01-15">
                 <span class="blog__day">14</span>
                 <span class="blog__month">Jan</span>
               </time>
@@ -1014,7 +1022,7 @@
                   alt="Incididunt ut labore et dolore">
               </picture>
 
-              <time class="blog__date">
+              <time class="blog__date" datetime="2016-01-15">
                 <span class="blog__day">12</span>
                 <span class="blog__month">Jan</span>
               </time>
@@ -1067,7 +1075,7 @@
               <li class="footer__social-item">
                 <a class="footer__social-link" href="https://www.facebook.com/" aria-label="Facebook" target="_blank"
                   rel="noopener">
-                  <svg class="cards__social-icon" width="8" height="16">
+                  <svg class="footer__social-icon" width="8" height="16">
                     <use href="img/sprite.svg#facebook"></use>
                   </svg>
                 </a>
@@ -1076,7 +1084,7 @@
               <li class="footer__social-item">
                 <a class="footer__social-link" href="https://www.twitter.com/" aria-label="Twitter" target="_blank"
                   rel="noopener">
-                  <svg class="cards__social-icon" width="16" height="14">
+                  <svg class="footer__social-icon" width="16" height="14">
                     <use href="img/sprite.svg#twitter"></use>
                   </svg>
                 </a>
@@ -1085,7 +1093,7 @@
               <li class="footer__social-item">
                 <a class="footer__social-link" href="https://www.instagram.com/" aria-label="Instagram" target="_blank"
                   rel="noopener">
-                  <svg class="cards__social-icon" width="16" height="16">
+                  <svg class="footer__social-icon" width="16" height="16">
                     <use href="img/sprite.svg#instagram"></use>
                   </svg>
                 </a>
@@ -1094,7 +1102,7 @@
               <li class="footer__social-item">
                 <a class="footer__social-link" href="https://www.pinterest.com/" aria-label="Pinterest" target="_blank"
                   rel="noopener">
-                  <svg class="cards__social-icon" width="13" height="16">
+                  <svg class="footer__social-icon" width="13" height="16">
                     <use href="img/sprite.svg#pinterest"></use>
                   </svg>
                 </a>
@@ -1103,7 +1111,7 @@
               <li class="footer__social-item">
                 <a class="footer__social-link" href="https://plus.google.com/" aria-label="Google plus" target="_blank"
                   rel="noopener">
-                  <svg class="cards__social-icon" width="16" height="14">
+                  <svg class="footer__social-icon" width="16" height="14">
                     <use href="img/sprite.svg#google-plus"></use>
                   </svg>
                 </a>
@@ -1112,7 +1120,7 @@
               <li class="footer__social-item">
                 <a class="footer__social-link" href="https://www.youtube.com/" aria-label="Youtube" target="_blank"
                   rel="noopener">
-                  <svg class="cards__social-icon" width="16" height="12">
+                  <svg class="footer__social-icon" width="16" height="12">
                     <use href="img/sprite.svg#youtube"></use>
                   </svg>
                 </a>
@@ -1121,7 +1129,7 @@
               <li class="footer__social-item">
                 <a class="footer__social-link" href="https://www.dribbble.com/" aria-label="Dribbble" target="_blank"
                   rel="noopener">
-                  <svg class="cards__social-icon" width="16" height="16">
+                  <svg class="footer__social-icon" width="16" height="16">
                     <use href="img/sprite.svg#dribbble"></use>
                   </svg>
                 </a>
@@ -1130,7 +1138,7 @@
               <li class="footer__social-item">
                 <a class="footer__social-link" href="https://www.tumblr.com/" aria-label="Tumblr" target="_blank"
                   rel="noopener">
-                  <svg class="cards__social-icon" width="10" height="16">
+                  <svg class="footer__social-icon" width="10" height="16">
                     <use href="img/sprite.svg#tumblr"></use>
                   </svg>
                 </a>
@@ -1139,7 +1147,7 @@
           </div>
         </div>
 
-        <form class="form" action="">
+        <form class="form" action="#">
           <input class="form__input" type="email" placeholder="Your Email...">
 
           <input class="form__submit" type="submit" value="subscribe">
@@ -1318,16 +1326,8 @@
     </svg>
   </button>
 
-  <!-- <script src="pp/script.js"></script> -->
   <script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
   <script src="js/main.min.js"></script>
-  <noscript>
-    <style>
-      .accordion__button--active+.accordion__content {
-        overflow: auto;
-      }
-    </style>
-  </noscript>
 </body>
 
 </html>

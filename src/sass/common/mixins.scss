@@ -10,12 +10,6 @@
     padding-right: 30px;
   }
 }
-@mixin flex {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	flex-wrap: wrap;
-}
 @mixin reset-ul {
 	list-style: none;
 	margin-top: 0;

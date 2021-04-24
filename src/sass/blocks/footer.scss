@@ -88,9 +88,9 @@
 }
 
 .footer__social {
-	@include flex;
-
-	justify-content: flex-start;
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
 	margin-bottom: 30px;
 	padding-top: 10px;
 	border-top: 1px solid $border-color;
@@ -106,9 +106,11 @@
 }
 
 .footer__social-list {
-	@include flex;
   @include reset-ul;
-	justify-content: flex-start;
+
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .footer__social-item {

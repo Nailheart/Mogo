@@ -19,8 +19,8 @@
   @media (min-width: $laptop) {
     margin-top: 90px;
   }
-  @media (min-width: 1920px) {
-    grid-template-columns: repeat(auto-fit, minmax(320px, 480px));
+  @media (min-width: $desktop) {
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 

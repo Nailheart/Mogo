@@ -21,7 +21,6 @@
     "gulp-svgstore": "latest",
     "gulp-terser": "latest",
     "gulp-webp": "latest",
-    "pixel-glass": "latest",
     "stylelint": "latest"
   },
   "scripts": {
