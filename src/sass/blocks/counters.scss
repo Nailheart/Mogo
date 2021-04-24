@@ -10,11 +10,17 @@
   @include reset-ul;
 
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: 1fr;
   grid-auto-rows: minmax(270px, auto);
   align-content: stretch;
   border-left: 1px solid transparentize($white, .7);
 
+  @media (min-width: 500px) {
+    grid-template-columns: 1fr 1fr;
+  }
+  @media (min-width: $tablet) {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  }
   @media (min-width: $laptop) {
     grid-template-columns: repeat(5, 1fr);
   }
@@ -30,6 +36,11 @@
 
     &:last-child {
       border-bottom: none;
+    }
+  }
+  @media (min-width: 500px) and (max-width: $tablet) {
+    &:last-child:not(:nth-child(even)) {
+      grid-column: 1/-1;
     }
   }
 }
