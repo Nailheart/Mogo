@@ -1,12 +1,10 @@
 .map {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   height: 200px;
   background-color: var(--color-grey);
   background-image: url("../img/backgrounds/map.jpg");
   background-repeat: no-repeat;
   background-position: center;
+  cursor: pointer;
   position: relative;
 
   &::before {
@@ -20,20 +18,37 @@
     left: 0;
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     &::before {
       opacity: .4;
+    }
+
+    .map__title {
+      color: var(--color-white);
+
+      &::after {
+        background-color: var(--color-white);
+      }
     }
   }
 }
 
 .map__title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   color: var(--color-red);
   font-size: 24px;
   font-weight: 700;
   text-transform: uppercase;
-  position: relative;
   transition: .2s;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 
   &::after {
     @include line;
