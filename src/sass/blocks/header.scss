@@ -17,8 +17,14 @@
   min-height: 360px;
   box-sizing: border-box;
 
+  @media (min-width: $tablet) {
+    min-height: 500px;
+  }
+  @media (min-width: $laptop) {
+    min-height: 680px;
+  }
   @media (min-width: $desktop) {
-    min-height: 760px;
+    min-height: 800px;
     padding-top: 24px;
     padding-left: 0;
     padding-right: 0;
