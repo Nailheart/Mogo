@@ -118,7 +118,6 @@ export const img = () => src(`${path.img.root}**/*`)
 export const copy = () => src([
     `${dirs.src}/fonts/**/*`,
     `${path.img.root}**/*`,
-    `${dirs.src}/pp/**/*`
   ], {
     base: dirs.src
   })
