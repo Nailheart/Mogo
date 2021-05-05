@@ -1,5 +1,5 @@
 // Слайдер блока intro
-const introControl = new Swiper('.intro__control', {
+const introControl = new Swiper('.control', {
   slidesPerView: 4,
   spaceBetween: 15,
 
@@ -9,8 +9,8 @@ const introControl = new Swiper('.intro__control', {
     }
   },
 
-  wrapperClass: 'intro__control-wrap',
-  slideClass: 'intro__control-button',
+  wrapperClass: 'control__wrap',
+  slideClass: 'control__button',
 });
 const intro = new Swiper('.intro', {
   slidesPerView: 1,
@@ -23,7 +23,7 @@ const intro = new Swiper('.intro', {
 
   thumbs: {
     swiper: introControl,
-    slideThumbActiveClass: 'intro__control-button--active'
+    slideThumbActiveClass: 'control__button--active'
   }
 });
 

@@ -1,0 +1,70 @@
+.control {
+  width: 100%;
+  overflow: hidden;
+}
+
+.control__wrap {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 100%;
+  transform: none !important;
+}
+
+.control__button {
+  @include resetButton;
+
+  color: var(--color-white);
+  font-size: 0;
+  text-transform: uppercase;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-top: 3px solid var(--color-white);
+  transition: .2s;
+  cursor: pointer;
+  opacity: .7;
+  position: relative;
+
+  &:hover,
+  &:focus {
+    opacity: 1;
+  }
+
+  &--active {
+    opacity: 1;
+
+    &::before {
+      content: "";
+      width: 35%;
+      height: 3px;
+      background-color: var(--color-red);
+      position: absolute;
+      top: -3px;
+      left: 0;
+    }
+
+    &:hover,
+    &:focus {
+      color: var(--color-white);
+      border-color: var(--color-white);
+    }
+  }
+
+  @media (min-width: $tablet) {
+    font-size: 18px;
+    text-align: left;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    &--active {
+      &::before {
+        width: 25%;
+      }
+    }
+  }
+}
+
+.control__number {
+  font-size: 24px;
+  font-weight: 700;
+  margin-right: 5px;
+}
