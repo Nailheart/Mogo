@@ -1,8 +1,8 @@
 .devices {
-	padding-top: 100px;
+  @include padding-top(6.66rem);
   background-color: var(--color-grey);
 	background-image:
-		linear-gradient(transparentize($white, .15), transparentize($white, .15)),
+		linear-gradient(rgba($white, .85), rgba($white, .85)),
 		url("../img/backgrounds/devices.jpg");
 	background-repeat: no-repeat;
 	background-position: center;
@@ -13,8 +13,8 @@
 }
 
 .devices__inner {
+  @include margin-top(3rem);
   max-width: 570px;
-	margin-top: 45px;
   margin-left: auto;
   margin-right: auto;
   position: relative;

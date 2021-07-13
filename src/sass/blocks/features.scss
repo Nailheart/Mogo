@@ -1,6 +1,6 @@
 .features {
-	padding-top: 110px;
-	padding-bottom: 120px;
+  @include padding-top(7.33rem);
+  @include padding-bottom(8rem);
 }
 
 .features__container {
@@ -8,17 +8,13 @@
 }
 
 .features__inner {
+  @include margin-top(3.33rem);
   display: grid;
   justify-content: center;
   gap: 30px;
-	margin-top: 50px;
 
-  @media (min-width: $tablet) {
-    margin-top: 80px;
-  }
-  @media (min-width: $laptop) {
-    grid-template-columns: max-content 1fr;
-  }
+  @media (min-width: $tablet) { margin-top: 80px; }
+  @media (min-width: $laptop) { grid-template-columns: max-content 1fr; }
 }
 
 .features__img {

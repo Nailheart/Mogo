@@ -11,7 +11,7 @@
     content: "";
     width: 100%;
     height: inherit;
-    background-image: linear-gradient(transparentize($white, 0.15), transparentize($white, 0.15));
+    background-image: linear-gradient(rgba($white, .85), rgba($white, .85));
     transition: .4s;
     position: absolute;
     top: 0;
@@ -35,12 +35,12 @@
 }
 
 .map__title {
+  @include font-size(1.6rem);
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   color: var(--color-red);
-  font-size: 24px;
   font-weight: 700;
   text-transform: uppercase;
   transition: .2s;
@@ -52,13 +52,12 @@
 
   &::after {
     @include line;
-
     margin-top: 15px;
     transition: .2s;
   }
 
   &:active {
-    opacity: 0.7;
+    opacity: .7;
   }
 }
 
@@ -69,5 +68,4 @@
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 15px;
-  // transition: .2s;
 }

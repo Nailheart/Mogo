@@ -1,6 +1,6 @@
 .about {
-	padding-top: 85px;
-	padding-bottom: 110px;
+  @include padding-top(5.66rem);
+  @include padding-bottom(7.33rem);
 }
 
 .about__container {
@@ -8,7 +8,7 @@
 }
 
 .about__cards {
-  margin-top: 85px;
+  @include margin-top(5.66rem);
 }
 
 .about__cards-img {

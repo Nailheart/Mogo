@@ -4,9 +4,7 @@
   margin-right: auto;
   overflow: hidden;
 
-  @media (min-width: $tablet) {
-    width: 75%;
-  }
+  @media (min-width: $tablet) { width: 75%; }
 }
 
 .intro__wrap {
@@ -24,52 +22,34 @@
 }
 
 .intro__title {
-  font-size: 40px;
+  @include font-size(6rem);
+  @include margin-bottom(3.33rem);
   line-height: .9;
   font-weight: 700;
   text-transform: uppercase;
-  margin-bottom: 30px;
 
   &::after {
+    @include margin-top(4.66rem);
     display: block;
     content: "";
     width: 60px;
     height: 3px;
-    margin: 25px auto 0;
+    margin-left: auto;
+    margin-right: auto;
     background-color: var(--color-white);
   }
 
-  @media (min-width: $tablet) {
-    font-size: 80px;
-    margin-bottom: 35px;
-  }
-  @media (min-width: $laptop) {
-    font-size: 120px;
-    margin-bottom: 50px;
-
-    &::after {
-      margin-top: 70px;
-    }
-  }
-  @media (min-width: $desktop) {
-    font-size: 150px;
-  }
+  @media (min-width: $desktop) { @include font-size(10rem); }
 }
 
 .intro__subtitle {
+  @include font-size(3rem);
   display: block;
   font-family: $subtitle-font;
-  font-size: 22px;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 
   @media (min-width: $tablet) {
-    font-size: 32px;
-    margin-bottom: 30px;
-  }
-  @media (min-width: $laptop) {
-    font-size: 52px;
-  }
-  @media (min-width: $desktop) {
-    font-size: 72px;
+    @include font-size(4.8rem);
+    @include margin-bottom(2rem);
   }
 }

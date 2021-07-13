@@ -1,18 +1,17 @@
 .comments {
-	padding-top: 70px;
-	padding-bottom: 70px;
+  @include padding-top(4.66rem);
+  @include padding-bottom(4.66rem);
 	background-color: var(--color-simple-grey);
 
   &--secondary {
-    padding-top: 100px;
-    padding-bottom: 130px;
+    @include padding-top(6.66rem);
+    @include padding-bottom(8.66rem);
     background-color: var(--color-white);
   }
 }
 
 .comments__container {
   @include container;
-
   position: relative;
 }
 

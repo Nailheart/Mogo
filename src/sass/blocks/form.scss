@@ -3,9 +3,7 @@
     display: grid;
     grid-template-columns: 1fr max-content;
   }
-  @media (min-width: $laptop) {
-    max-width: 380px;
-  }
+  @media (min-width: $laptop) {max-width: 380px; }
 }
 
 .form__input {
@@ -57,7 +55,5 @@
 		opacity: .4;
 	}
 
-  @media (min-width: $tablet) {
-    width: auto;
-  }
+  @media (min-width: $tablet) { width: auto; }
 }

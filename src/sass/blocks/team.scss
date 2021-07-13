@@ -1,6 +1,6 @@
 .team {
-	padding-top: 100px;
-	padding-bottom: 110px;
+	@include padding-top(6.66rem);
+  @include padding-bottom(7.33rem);
 }
 
 .team__container {
@@ -8,10 +8,10 @@
 }
 
 .team__cards {
-	margin-top: 50px;
+  @include margin-top(3.33rem);
 
   @media (min-width: $tablet) {
-    margin-top: 90px;
+    @include margin-top(6rem);
   }
 }
 

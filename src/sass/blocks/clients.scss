@@ -1,9 +1,9 @@
 .clients {
-	padding-top: 110px;
-	padding-bottom: 60px;
+  @include padding-top(7.33rem);
+  @include padding-bottom(4rem);
 	background-color: var(--color-grey);
 	background-image:
-		linear-gradient(transparentize($white, .15), transparentize($white, .15)),
+  linear-gradient(rgba($white, .85), rgba($white, .85)),
 		url("../img/backgrounds/clients.jpg");
 	background-repeat: no-repeat;
 	background-position: center top;
@@ -16,11 +16,11 @@
 
 .clients__list {
   @include reset-ul;
+  @include margin-top(6rem);
 
   display: grid;
   justify-content: center;
   gap: 30px;
-	margin-top: 90px;
 
   @media (min-width: $laptop) {
     grid-template-columns: 1fr 1fr;
@@ -75,7 +75,6 @@
 
 	&::after {
 		@include line;
-
 		margin-top: 20px;
 		margin-bottom: 20px;
 	}

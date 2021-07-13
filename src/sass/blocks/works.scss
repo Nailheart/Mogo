@@ -1,5 +1,5 @@
 .works {
-	padding-top: 110px;
+  @include margin-top(7.33rem);
 }
 
 .works__section-header {
@@ -7,21 +7,13 @@
 }
 
 .works__list {
+  @include margin-top(6rem);
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   justify-content: center;
   max-width: 1920px;
-	margin-top: 50px;
 
-  @media (min-width: $tablet) {
-    margin-top: 70px;
-  }
-  @media (min-width: $laptop) {
-    margin-top: 90px;
-  }
-  @media (min-width: $desktop) {
-    grid-template-columns: repeat(4, 1fr);
-  }
+  @media (min-width: $desktop) { grid-template-columns: repeat(4, 1fr); }
 }
 
 .works__item {
@@ -33,13 +25,8 @@
 
   &:hover,
   &:focus {
-    .works__img {
-      opacity: .1;
-    }
-
-    .works__description {
-      opacity: 1;
-    }
+    .works__img { opacity: .1; }
+    .works__description { opacity: 1; }
   }
 
   &--big {

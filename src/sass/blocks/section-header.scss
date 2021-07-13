@@ -3,21 +3,21 @@
 }
 
 .section-header__subtitle {
+  @include font-size(24px);
+  @include margin-bottom(10px);
   display: block;
 	font-family: $subtitle-font;
-	font-size: 24px;
 	text-transform: none;
-	margin-bottom: 10px;
 }
 
 .section-header__title {
-	font-size: 30px;
+  @include font-size(2rem);
+  @include margin-bottom(40px);
 	text-transform: uppercase;
-	margin-bottom: 40px;
 
 	&::after {
 		@include line;
-		margin-top: 30px;
+    @include margin-top(2rem);
 	}
 
   &:last-child {
@@ -26,11 +26,12 @@
 }
 
 .section-header__text {
-	color: var(--color-grey);
-	font-family: $text-font;
-	line-height: 1.6;
-	max-width: 960px;
-	margin: 0 auto 15px;
+  @include margin-bottom(1rem);
+  color: var(--color-grey);
+  font-family: $text-font;
+  line-height: 1.6;
+  max-width: 960px;
+  margin: 0 auto;
 
   &:last-child {
     margin-bottom: 0;

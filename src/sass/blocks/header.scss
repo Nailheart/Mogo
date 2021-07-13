@@ -2,7 +2,7 @@
 	color: var(--color-white);
 	text-align: center;
 	background-image:
-    linear-gradient(transparentize($red, .15), transparentize($yellow, .15)),
+    linear-gradient(rgba($red, .85), rgba($yellow, .85)),
 		url("../img/backgrounds/header.jpg");
 	background-repeat: no-repeat;
 	background-position: center top;
@@ -17,12 +17,8 @@
   min-height: 360px;
   box-sizing: border-box;
 
-  @media (min-width: $tablet) {
-    min-height: 500px;
-  }
-  @media (min-width: $laptop) {
-    min-height: 680px;
-  }
+  @media (min-width: $tablet) { min-height: 500px; }
+  @media (min-width: $laptop) { min-height: 680px; }
   @media (min-width: $desktop) {
     min-height: 800px;
     padding-top: 24px;
@@ -39,7 +35,5 @@
   padding-top: 15px;
   padding-bottom: 15px;
 
-  @media (min-width: $tablet) {
-    align-items: baseline;
-  }
+  @media (min-width: $tablet) { align-items: baseline; }
 }

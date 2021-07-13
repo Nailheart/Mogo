@@ -1,6 +1,6 @@
 .blog {
-	padding-top: 100px;
-	padding-bottom: 105px;
+  @include padding-top(6.66rem);
+  @include padding-bottom(7rem);
 }
 
 .blog__container {
@@ -9,11 +9,11 @@
 
 .blog__list {
   @include reset-ul;
+  @include margin-top(3.33rem);
 
 	display: flex;
   justify-content: center;
   flex-wrap: wrap;
-	margin-top: 50px;
 
   @media (min-width: $tablet) {
     margin-right: -30px;

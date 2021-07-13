@@ -1,21 +1,17 @@
 .footer {
-	padding-top: 70px;
+  @include padding-top(4.66rem);
 	background-color: $simple-grey;
 }
 
 .footer__container {
   @include container;
+  @include margin-bottom(4.66);
 
   display: grid;
   gap: 45px;
-  margin-bottom: 70px;
 
-  @media (min-width: $tablet) {
-    grid-template-columns: 1fr 1fr;
-  }
-  @media (min-width: $laptop) {
-	  grid-template-columns: 38.75% 31.25% 22.5%;
-  }
+  @media (min-width: $tablet) { grid-template-columns: 1fr 1fr; }
+  @media (min-width: $laptop) { grid-template-columns: 38.75% 31.25% 22.5%; }
 }
 
 .footer__col {
@@ -32,27 +28,26 @@
     }
 
     &--grid {
-      width: max-content;
       justify-self: center;
+      width: max-content;
     }
   }
-
   @media (min-width: $laptop) {
     &:first-child {
       grid-column: auto;
     }
 
     &--grid {
-      width: auto;
       justify-self: auto;
+      width: auto;
     }
   }
 }
 
 .footer__logo {
+  @include font-size(3rem);
 	display: inline-block;
 	color: $light-grey;
-	font-size: 46px;
 	font-weight: 700;
   line-height: 1;
 	margin-bottom: 30px;
@@ -64,7 +59,7 @@
   }
 
   &:active {
-    color: transparentize($red, .6)
+    color: rgba($red, .4);
   }
 }
 
@@ -75,7 +70,7 @@
 }
 
 .footer__followers {
-	margin-top: 40px;
+  @include margin-top(2.66rem);
 }
 
 .footer__followers-title {
@@ -161,9 +156,7 @@
   display: grid;
   gap: 20px;
 
-  @media (min-width: $tablet) {
-    gap: 30px;
-  }
+  @media (min-width: $tablet) { gap: 30px; }
 }
 
 .footer__instagram {

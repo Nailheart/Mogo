@@ -1,6 +1,6 @@
 .services {
-	padding-top: 100px;
-	padding-bottom: 110px;
+  @include padding-top(6.66rem);
+  @include padding-bottom(7.33rem);
 }
 
 .services__container {
@@ -9,12 +9,11 @@
 
 .services__list {
   @include reset-ul;
-
+  @include margin-top(4rem);
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
   grid-auto-flow: dense;
   gap: 30px 20px;
-	margin-top: 60px;
 
   @media (min-width: $laptop) {
     grid-template-columns: repeat(3, 1fr);
@@ -38,29 +37,12 @@
 		left: 25px;
 	}
 
-	&--alarm::before {
-		background-image: url("../img/icons/alarm.png");
-	}
-
-	&--line-graph::before {
-		background-image: url("../img/icons/line-graph.png");
-	}
-
-	&--computer::before {
-		background-image: url("../img/icons/computer.png");
-	}
-
-	&--book::before {
-		background-image: url("../img/icons/book.png");
-	}
-
-	&--home::before {
-		background-image: url("../img/icons/home.png");
-	}
-
-	&--square::before {
-		background-image: url("../img/icons/square.png");
-	}
+	&--alarm::before { background-image: url("../img/icons/alarm.png"); }
+	&--line-graph::before { background-image: url("../img/icons/line-graph.png"); }
+	&--computer::before { background-image: url("../img/icons/computer.png"); }
+	&--book::before { background-image: url("../img/icons/book.png"); }
+	&--home::before { background-image: url("../img/icons/home.png"); }
+	&--square::before { background-image: url("../img/icons/square.png"); }
 }
 
 .services__title {
@@ -86,7 +68,5 @@
   height: 1px;
   background-color: var(--color-border);
 
-  @media (min-width: $laptop) {
-    display: block;
-  }
+  @media (min-width: $laptop) { display: block; }
 }

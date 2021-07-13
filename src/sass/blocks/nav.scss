@@ -43,23 +43,15 @@
     }
   }
 
-  @media (min-width: $tablet) {
-    display: flex;
-  }
+  @media (min-width: $tablet) { display: flex; }
   @media (min-width: $laptop) {
-    .nav__toggle {
-      display: none;
-    }
-
-    .nav__list {
-      display: flex;
-    }
+    .nav__toggle { display: none; }
+    .nav__list { display: flex; }
   }
 }
 
 .nav__toggle {
   @include resetButton;
-
   width: 24px;
   height: 16px;
 }
@@ -87,25 +79,18 @@
 
 .nav__list {
   @include reset-ul;
-
   display: none;
 }
 
 .nav__item {
   margin-right: 56px;
 
-  &:last-child {
-    margin-right: 0;
-  }
-
-  &--cart {
-    margin-right: 40px;
-  }
+  &:last-child { margin-right: 0; }
+  &--cart { margin-right: 40px; }
 }
 
 .nav__link {
   @include hoverHeaderNav;
-
   display: block;
   color: var(--color-white);
   font-size: 14px;
