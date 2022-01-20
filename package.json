@@ -1,5 +1,6 @@
 {
   "name": "mogo",
+  "homepage": "nailheart.github.io/mogo/",
   "private": true,
   "type": "module",
   "devDependencies": {
