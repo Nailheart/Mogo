@@ -15,7 +15,7 @@
     "gulp-imagemin": "latest",
     "gulp-plumber": "latest",
     "gulp-rename": "latest",
-    "gulp-sass": "latest",
+    "gulp-dart-sass": "latest",
     "gulp-sourcemaps": "latest",
     "gulp-svgmin": "latest",
     "gulp-svgstore": "latest",
@@ -34,7 +34,6 @@
     "not ie <= 11"
   ],
   "dependencies": {
-    "rfs": "^9.0.4",
     "swiper": "latest"
   }
 }
