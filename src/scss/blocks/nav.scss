@@ -4,8 +4,13 @@
 
   &--opened {
     flex-direction: column;
+    width: 100%;
+    min-height: 100%;
+    margin-left: 0;
     padding-top: 60px;
     background-color: var(--color-second-red);
+    box-sizing: border-box;
+    overflow-y: auto;
     position: absolute;
     top: 0;
     left: 0;
@@ -14,7 +19,7 @@
 
     .nav__toggle {
       position: absolute;
-      top: 21px;
+      top: 17px;
       right: 15px;
     }
 
@@ -86,11 +91,11 @@
   margin-right: 56px;
 
   &:last-child { margin-right: 0; }
-  &--cart { margin-right: 40px; }
 }
 
 .nav__link {
   @include hoverHeaderNav;
+
   display: block;
   color: var(--color-white);
   font-size: 14px;
@@ -100,14 +105,10 @@
     color: var(--color-yellow);
     border-color: var(--color-yellow);
   }
-}
 
-.nav__cart {
-  display: none;
-  margin-left: 50px;
-  margin-right: 40px;
-}
-
-.nav__search {
-  display: none;
+  @media (max-width: $laptop) {
+    &--active {
+      border-color: transparent;
+    }
+  }
 }

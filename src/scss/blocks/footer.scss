@@ -5,7 +5,7 @@
 
 .footer__container {
   @include container;
-  @include margin-bottom(4.66);
+  @include margin-bottom(4.66rem);
 
   display: grid;
   gap: 45px;

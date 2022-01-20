@@ -1,5 +1,6 @@
 .scroll-to-top {
   @include resetButton;
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -9,10 +10,10 @@
   border-radius: 50%;
   transition: background-color .2s, right .4s;
   position: fixed;
-  right: 50px;
-  bottom: 50px;
+  right: 30px;
+  bottom: 30px;
   transform: rotate(180deg);
-  z-index: 999;
+  z-index: 9;
 
   &:hover,
   &:focus {
@@ -20,7 +21,16 @@
   }
 
   &--hide {
-    right: -50px;
+    right: -30px;
+  }
+
+  @media (min-width: $tablet) {
+    right: 50px;
+    bottom: 50px;
+
+    &--hide {
+      right: -50px;
+    }
   }
 }
 

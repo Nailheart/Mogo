@@ -47,17 +47,9 @@
 		}
 	}
 
-	&--picture::before {
-		background-image: url("../img/icons/picture.svg");
-	}
-
-	&--equalizer::before {
-		background-image: url("../img/icons/equalizer.png");
-	}
-
-	&--bullseye::before {
-		background-image: url("../img/icons/bullseye.png");
-	}
+	&--picture::before { background-image: url("../img/icons/picture.svg"); }
+	&--equalizer::before { background-image: url("../img/icons/equalizer.png"); }
+	&--bullseye::before { background-image: url("../img/icons/bullseye.png"); }
 
   &--active {
     .accordion__button-arrow {
@@ -68,7 +60,7 @@
 
   &--active + .accordion__content {
     max-height: 180px;
-    padding: 20px 40px 0 20px;
+    padding-top: 20px;
     border-width: 1px;
     border-style: solid;
     border-top: none;
@@ -87,6 +79,8 @@
 
 .accordion__content {
 	max-height: 0;
+  padding-left: 20px;
+  padding-right: 40px;
   border-color: var(--color-border);
   box-sizing: border-box;
   overflow: hidden;

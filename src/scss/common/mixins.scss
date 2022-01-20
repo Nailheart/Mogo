@@ -30,7 +30,7 @@
   transition: .2s;
 
   &:hover,
-  &:focus {
+  &:focus-visible {
     color: var(--color-yellow);
     border-color: var(--color-yellow);
   }

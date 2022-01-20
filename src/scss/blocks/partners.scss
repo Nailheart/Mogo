@@ -1,6 +1,7 @@
 .partners {
   @include padding-top(4rem);
   @include padding-bottom(4rem);
+
 	background-color: var(--color-simple-grey);
 }
 
@@ -10,6 +11,7 @@
 
 .partners__list {
   @include reset-ul;
+
   display: grid;
   grid-template-columns: 1fr 1fr;
   justify-items: center;
