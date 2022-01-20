@@ -10,8 +10,8 @@
   border-radius: 50%;
   transition: background-color .2s, right .4s;
   position: fixed;
-  right: 30px;
-  bottom: 30px;
+  right: 50px;
+  bottom: 50px;
   transform: rotate(180deg);
   z-index: 9;
 
@@ -20,17 +20,13 @@
     background-color: var(--color-second-red);
   }
 
-  &--hide {
-    right: -30px;
+  @media (max-width: $tablet) {
+    right: 30px;
+    bottom: 30px;
   }
 
-  @media (min-width: $tablet) {
-    right: 50px;
-    bottom: 50px;
-
-    &--hide {
-      right: -50px;
-    }
+  &--hide {
+    right: -50px;
   }
 }
 
