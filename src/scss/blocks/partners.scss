@@ -24,3 +24,13 @@
   }
   @media (min-width: $laptop) { grid-template-columns: repeat(6, 1fr); }
 }
+
+.partners__item {
+  cursor: pointer;
+  transition: .2s;
+
+  &:hover,
+  &:focus-visible {
+    transform: scale(.95);
+  }
+}

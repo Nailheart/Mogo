@@ -18,13 +18,13 @@ import browserSync from 'browser-sync';
 
 const { src, dest, series, parallel, watch } = gulp;
 
-// Основные директории
+// Dirs
 const dirs = {
   src: 'src',
   dest: 'build'
 };
 
-// Пути к файлам
+// Paths to files
 const path = {
   styles: {
     root: `${dirs.src}/scss/`,

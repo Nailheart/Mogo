@@ -1,5 +1,5 @@
 (() => {
-  // Слайдер блока intro
+  // Intro slider
   const introControl = new Swiper('.control', {
     slidesPerView: 4,
     spaceBetween: 15,
@@ -28,7 +28,7 @@
     }
   });
 
-  // Слайдер секции comments
+  // Comments slider
   const swiper = new Swiper('.swiper-container', {
     loop: true,
 
@@ -38,7 +38,7 @@
     }
   });
 
-  // Переключаем аккордион
+  // Accordion
   const accordionButtons = document.querySelectorAll('.accordion__button');
   if (accordionButtons) {
     accordionButtons.forEach((button) => {
@@ -55,7 +55,7 @@
     })
   }
 
-  // Кастомный скролл simplebar
+  // Custom scrollbar simplebar
   const scrollItems = document.querySelectorAll('.accordion__content');
   if (scrollItems) {
     scrollItems.forEach((item) => {
@@ -63,7 +63,7 @@
     });
   }
 
-  // Скролл на верх сайта
+  // Scroll to top
   const scollToTop = document.querySelector('.scroll-to-top');
   if (scollToTop) {
     window.addEventListener('scroll', () => {
@@ -79,7 +79,7 @@
     });
   }
 
-  // Открытие закрытие бургер меню
+  // Toggle burger menu
   const nav = document.querySelector('.nav');
   if (nav) {
     const burger = document.querySelector('.nav__toggle');

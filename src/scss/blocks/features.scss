@@ -10,13 +10,16 @@
 .features__inner {
   @include margin-top(3.33rem);
   display: grid;
-  justify-content: center;
+  grid-template-columns: 100%;
   gap: 30px;
 
   @media (min-width: $tablet) { margin-top: 80px; }
-  @media (min-width: $laptop) { grid-template-columns: max-content 1fr; }
+  @media (min-width: $laptop) { grid-template-columns: 570px calc(100% - 600px); }
 }
 
 .features__img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 	max-height: 380px;
 }

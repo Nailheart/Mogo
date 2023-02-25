@@ -61,9 +61,7 @@
   &--active + .accordion__content {
     max-height: 180px;
     padding-top: 20px;
-    border-width: 1px;
-    border-style: solid;
-    border-top: none;
+    border-color: var(--color-border);
     overflow: visible;
   }
 }
@@ -81,7 +79,8 @@
 	max-height: 0;
   padding-left: 20px;
   padding-right: 40px;
-  border-color: var(--color-border);
+  border: 1px solid transparent;
+  border-top: none;
   box-sizing: border-box;
   overflow: hidden;
   transition: .3s;
